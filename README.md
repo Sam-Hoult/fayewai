@@ -37,6 +37,23 @@ site/
   assets/             images (art/, photos/, editorial/)
 ```
 
+## Theme panel
+
+Every page has a small “· Theme” button at the end of the footer. It opens a panel where Faye can try presets (Paper, Blush, Sage, Stone, Night), pick any colour, change the heading and text fonts, the heading weight, and corner radius — live, on the real pages.
+
+- **Save here** keeps the look in that browser only (localStorage).
+- **Copy link** makes a URL with the theme in it, so anyone opening it sees that look.
+- **Send to Sam** opens an email with the settings and the link.
+- **Reset** goes back to the site default.
+
+To make a theme the default for everyone: paste the settings from the email (or decode the link) into `site/js/theme-default.js`, e.g.
+
+```js
+window.THEME_DEFAULT = { paper: '#F3F4EE', accent: '#7E8C5A', serif: 'Fraunces', radius: 8 };
+```
+
+Fonts on offer are listed at the top of `site/js/theme.js`; add more there.
+
 ## Design
 
 Tokens, type, and rhythm follow the Claude Design handoff exactly:
