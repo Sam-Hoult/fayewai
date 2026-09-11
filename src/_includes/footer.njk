@@ -2,12 +2,16 @@
 <footer class="footer">
   <div class="grid grid--footer">
     <div>
+      {#- A page can hide this block with `commissions: false` in its front matter. -#}
+      {%- if commissions !== false %}
       <p class="h2" style="max-width:22ch">{{ site.footer.heading }}</p>
       <p class="prose">{{ site.footer.body }}</p>
+      {%- endif %}
     </div>
     <div class="footer__connect">
       <span class="eyebrow">Connect</span>
       <a class="footer__mail" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a class="small" href="{{ site.instagram }}" target="_blank" rel="noopener">Instagram — @fayewai.art</a>
       <a class="small" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>

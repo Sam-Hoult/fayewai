@@ -114,9 +114,9 @@
     lb.querySelector('.lightbox__close').focus();
   }
   function closeLightbox() {
+    document.body.style.overflow = '';
     if (!lb) return;
     lb.classList.remove('is-open');
-    document.body.style.overflow = '';
   }
   /* Only what is on screen right now — a filtered-out piece should not turn up
      when you arrow through the lightbox. */
@@ -135,6 +135,34 @@
       meta: caps[1] ? caps[1].textContent : ''
     };
   }
+  /* ---------- Carousels ---------- */
+  /* Any [data-rail] scrolls sideways. Its buttons are [data-rail-prev] / [data-rail-next]
+     inside the same [data-rail-group]. Works without JS — the rail still scrolls. */
+  function startRails() {
+    [].forEach.call(document.querySelectorAll('[data-rail-group]'), function (group) {
+      var rail = group.querySelector('[data-rail]');
+      var prev = group.querySelector('[data-rail-prev]');
+      var next = group.querySelector('[data-rail-next]');
+      if (!rail) return;
+      var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function step(dir) {
+        rail.scrollBy({ left: dir * Math.max(240, rail.clientWidth * 0.8), behavior: smooth ? 'smooth' : 'auto' });
+      }
+      function sync() {
+        var max = rail.scrollWidth - rail.clientWidth - 2;
+        if (prev) prev.disabled = rail.scrollLeft <= 2;
+        if (next) next.disabled = rail.scrollLeft >= max;
+        if (prev && next) group.hidden = false;
+      }
+      if (prev) prev.addEventListener('click', function () { step(-1); });
+      if (next) next.addEventListener('click', function () { step(1); });
+      rail.addEventListener('scroll', sync, { passive: true });
+      window.addEventListener('resize', sync);
+      sync();
+    });
+  }
+
   function bindLightbox(container) {
     [].forEach.call(container.querySelectorAll('.work:not(.work--placeholder)'), function (f) {
       if (f.__lb) return;
@@ -153,6 +181,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     [].forEach.call(document.querySelectorAll('[data-lightbox]'), bindLightbox);
     startFilters();
+    startRails();
     startReveals();
   });
 })();

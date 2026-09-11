@@ -10,7 +10,7 @@
   <figcaption><span class="work__title">{{ w.title }}</span><span>{{ w.meta or 'Coming' }}</span></figcaption>
 </figure>
 {%- else -%}
-<figure class="work{{ ' ' + extraClass if extraClass }}"{% if reveal %} data-reveal{% endif %} tabindex="0" role="button" aria-label="View {{ w.title }}" data-full="{{ w.full or w.src }}" data-type="{{ w.type or 'other' }}">
+<figure class="work{{ ' work--wide' if w.wide }}{{ ' ' + extraClass if extraClass }}"{% if reveal %} data-reveal{% endif %} tabindex="0" role="button" aria-label="View {{ w.title }}" data-full="{{ w.full or w.src }}" data-type="{{ w.type or 'other' }}">
   <div class="frame {{ ratio or w.ratio or 'sq' }}{{ ' frame--contain frame--paper' if w.contain }}">
     <img src="{{ w.src }}" alt="{{ w.alt or w.title }}"{% if w.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}{% if w.position %} style="object-position:{{ w.position }}"{% endif %}>
   </div>

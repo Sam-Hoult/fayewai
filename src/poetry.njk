@@ -3,90 +3,95 @@ title: 'Poetry — Faye Wai'
 description: 'fragments & echoes — a limited-release poetry chapbook by Faye Wai on heartbreak, home, and healing. Read it page by page.'
 ogTitle: 'fragments & echoes — Faye Wai'
 ogDescription: 'A limited-release poetry chapbook on heartbreak, home, and healing.'
+commissions: false
 scripts:
-  - js/flipbook.js
+  - js/poems.js
 ---
 <main id="main">
 <div class="wrap">
 
   <header class="hero hero--page grid grid--hero grid--hero-poetry">
     <div>
-      <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Poetry · chapbook 2026</span></div>
-      <h1 class="display h1--tight">fragments<br><span class="i">&amp; echoes</span></h1>
-      <p class="lede" style="color:var(--muted);margin-top:clamp(24px,3.4vh,38px)">A limited-release chapbook on heartbreak, home, and healing — written across cities and life chapters.</p>
+      <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Poetry</span></div>
+      <h1 class="display h1--page" style="font-size:clamp(34px,4.4vw,68px);max-width:20ch">Poetry is where I put the thoughts that arrived tangled.</h1>
+      <div class="prose" style="margin-top:clamp(24px,3.4vh,38px);max-width:54ch">
+        <p>I write to slow them down, turn them over, and see what they reveal about my inner world. Sometimes a poem begins with a memory, sometimes a bodily feeling, an image, a joke, a phrase I can’t stop thinking about, or something I’ve been carrying without realising it.</p>
+        <p>By the time I reach the end, I usually understand the topic, or myself, a little differently.</p>
+      </div>
       <div class="btns" style="margin-top:clamp(28px,4vh,44px)">
         <a class="btn btn--solid" href="#read">Start reading</a>
-        <a class="btn" href="{{ chapbook.sample }}" target="_blank" rel="noopener">Sample artwork</a>
       </div>
     </div>
-    <div class="frame frame--paper frame--contain r34"><img src="assets/chapbook-cover.jpg" alt="fragments &amp; echoes chapbook cover" fetchpriority="high"></div>
+    <div class="tiles tiles--2" style="align-self:end">
+      {%- for ph in stage.hero %}
+      <div class="frame frame--round r34"><img src="{{ ph.src }}" alt="{{ ph.alt }}"{% if loop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}{% if ph.position %} style="object-position:{{ ph.position }}"{% endif %}></div>
+      {%- endfor %}
+    </div>
   </header>
 
-  <section class="facts" data-reveal aria-label="About the chapbook">
-    <div><span class="label">Themes</span><p>Heartbreak · home · healing</p></div>
-    <div><span class="label">Written</span><p>Hong Kong · Vancouver Island · Port Moody</p></div>
-    <div><span class="label">Release</span><p>Limited run — <a href="mailto:{{ site.email }}?subject=fragments%20%26%20echoes" style="color:var(--accent)">enquire by email</a></p></div>
-  </section>
-
-  {#- The flipbook. Its page list lives in _data/chapbook.js and is handed to
-      js/flipbook.js as JSON below. -#}
-  <section id="read" class="section section--rule" data-reveal style="padding-top:clamp(40px,6vh,80px);padding-bottom:clamp(50px,8vh,100px)" aria-labelledby="read-h">
-    <div class="section-head" style="margin-bottom:0;flex-wrap:wrap;gap:16px">
-      <span class="eyebrow" id="read-h">Read the chapbook</span>
-      <span class="label" data-counter aria-live="polite"></span>
-    </div>
-    <div class="reader" data-stage>
-      <div class="book" data-book>
-        <div class="page page--l" data-page="l"><span class="page__label" data-label></span></div>
-        <div class="page page--r" data-page="r"><span class="page__label" data-label></span></div>
-        <div class="leaf" data-leaf aria-hidden="true">
-          <div class="leaf__face leaf__face--front"></div>
-          <div class="leaf__face leaf__face--back"></div>
-        </div>
-      </div>
-      <div class="reader__status" data-status></div>
-    </div>
-    <div class="reader-bar">
-      <div class="reader-bar__btns">
-        <button class="btn btn--sm" type="button" data-prev>← Back</button>
-        <button class="btn btn--sm" type="button" data-next>Next →</button>
-        <a class="btn btn--sm" data-download hidden download>Download PDF</a>
-      </div>
-      <span class="hint">Drag across the pages, or use ← →</span>
-    </div>
-    <p class="note" data-reader-note style="margin-top:14px">Also on <a href="{{ chapbook.sample }}" target="_blank" rel="noopener">Canva</a>.</p>
-  </section>
-
-  {#- Poems from _data/poems.js. The section only exists once there is one. -#}
-  {%- if poems.length %}
-  <section class="section section--rule" aria-labelledby="poems-h">
-    <div class="section-head section-head--rule">
-      <span class="eyebrow" id="poems-h">Selected poems</span>
+  {#- The poems. Everything is in _data/poems.js; js/poems.js opens one over the page. -#}
+  <section id="read" class="section" aria-labelledby="poems-h" style="padding-top:clamp(40px,6vh,80px);padding-bottom:clamp(50px,8vh,100px)">
+    <div class="section-head section-head--rule" data-reveal>
+      <h2 class="h2" id="poems-h">Selected poems</h2>
       <span class="small" style="color:var(--faint)">{{ poems.length }} poem{{ 's' if poems.length != 1 }}</span>
     </div>
-    <div>
+    <div class="poems">
       {%- for p in poems %}
-      <article class="poem" data-reveal>
-        <div>
-          <h3 class="poem__title">{{ p.title }}</h3>
-          {%- set meta = [p.where, p.when] | select | join(' · ') %}
-          {%- if meta %}<p class="poem__meta">{{ meta }}</p>{% endif %}
-        </div>
-        <div class="poem__body">{{ p.body }}</div>
+      <article class="pcard" data-reveal data-poem="{{ p.slug }}" data-title="{{ p.title }}"{% if p.year %} data-year="{{ p.year }}"{% endif %}{% if p.note %} data-note="{{ p.note }}"{% endif %}>
+        <h3 class="pcard__title">{{ p.title }}</h3>
+        {%- if p.year %}<p class="pcard__meta">{{ p.year }}</p>{% endif %}
+        <p class="pcard__lines">{{ p.excerpt }}</p>
+        <a class="pcard__go" href="#poem-{{ p.slug }}" data-poem-open>Read poem →</a>
+        <div data-poem-body hidden>{{ p.body }}</div>
       </article>
       {%- endfor %}
     </div>
   </section>
-  {%- endif %}
 
-  <section class="section grid grid--2 grid--end" data-reveal style="padding-top:clamp(50px,8vh,100px);padding-bottom:clamp(40px,6vh,70px)">
-    <p class="pull">The little moments and emotions, captured across places and seasons of life.</p>
-    <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-      <p style="font-size:13px;line-height:1.7;color:var(--faint)">New poems are added as they’re written.</p>
-      <a class="btn btn--md" href="art.html">See the visual art →</a>
+  <section class="section section--rule grid grid--2" aria-labelledby="live-h" style="padding-top:clamp(50px,8vh,100px);padding-bottom:clamp(50px,8vh,100px)">
+    <div data-reveal>
+      <h2 class="h2" id="live-h" style="max-width:15ch">Come write and read poetry with me</h2>
+      <p class="pcard__meta" style="margin-top:16px">Regular open mics + selected features</p>
+      <div class="tiles tiles--2" style="margin-top:clamp(30px,4.5vh,48px);max-width:460px">
+        {%- for ph in stage.live %}
+        <div class="frame frame--round r34"><img src="{{ ph.src }}" alt="{{ ph.alt }}" loading="lazy"{% if ph.position %} style="object-position:{{ ph.position }}"{% endif %}></div>
+        {%- endfor %}
+      </div>
+    </div>
+    <div data-reveal>
+      <p class="prose" style="max-width:50ch">Poetry doesn’t only live on the page. I love the spaces where writing becomes something shared — through workshops, open mics, conversation, and responding to life together.</p>
+      {%- if workshop %}
+      <a class="feature" href="{{ workshop.href }}" target="_blank" rel="noopener">
+        <div class="frame feature__art r34"><img src="{{ workshop.image }}" alt="{{ workshop.alt }}" loading="lazy"></div>
+        <div class="feature__in">
+          <span class="eyebrow">Next up</span>
+          <h3 class="feature__title">{{ workshop.title }}</h3>
+          <p class="feature__sub">{{ workshop.subtitle }}</p>
+          <p class="feature__when">{{ workshop.when }}<br>{{ workshop.where }}</p>
+          <span class="feature__cta">{{ workshop.cta }} →</span>
+        </div>
+      </a>
+      {%- endif %}
+      <p class="eyebrow eyebrow--faint" style="display:block;margin-top:clamp(30px,4.5vh,44px)">Selected features &amp; appearances</p>
+      <div class="bill">
+        {%- for r in readings %}
+        <div><span class="bill__name">{{ r.name }}</span><span class="bill__where">{{ r.where }}</span></div>
+        {%- endfor %}
+      </div>
     </div>
   </section>
 
 </div>
+
+<section class="panel panel--rule panel--tight" aria-labelledby="chapbook-h">
+  <div class="panel__in grid grid--panel grid--end">
+    <div data-reveal>
+      <span class="eyebrow">Chapbook</span>
+      <h2 class="display h2--big" id="chapbook-h">fragments<br><span class="i">&amp; echoes</span></h2>
+      <p class="prose">A poetry collection in progress. Written to trace heartbreak, home, memory, and becoming across different chapters of a life.</p>
+    </div>
+    <div data-reveal><div class="frame frame--blush frame--contain sq" style="max-width:260px;margin-left:auto"><img src="assets/chapbook-cover-blush.jpg" alt="fragments &amp; echoes chapbook cover" loading="lazy"></div></div>
+  </div>
+</section>
+
 </main>
-<script>window.CHAPBOOK = {{ chapbook | json | safe }};</script>
