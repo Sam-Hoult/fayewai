@@ -34,7 +34,7 @@ src/
   js/site.js          nav, scroll reveals, gallery filters, lightbox
   js/flipbook.js      chapbook reader (images, or a PDF via pdf.js)
   js/theme.js         the theme panel
-  assets/             images (art/, photos/, editorial/)
+  assets/             images (art/, photos/, editorial/, editorial/work/)
   chapbook/pages/     chapbook page images
 eleventy.config.js    build settings
 ```
@@ -47,7 +47,7 @@ Each page’s title, description and social image are the few lines of front mat
 - **A poem** → add an object to `src/_data/poems.js`. The “Selected poems” section appears once there is at least one.
 - **Chapbook pages** → see `src/chapbook/README.md`. Either a PDF at `src/chapbook/fragments-and-echoes.pdf` or page images listed in `src/_data/chapbook.js`. The reader picks either up on its own.
 - **A photo on About** → add a line to `src/_data/places.js`.
-- **A byline or brand** → add a line to `src/_data/editorial.js`.
+- **A byline or brand** → add a line to `src/_data/editorial.js`. Put the piece's image in `src/assets/editorial/work/` and name it in `image`; set `mark: true` when it's a logo rather than a picture.
 - **A nav link, the email address, the footer words** → `src/_data/site.js`. It changes on every page at once.
 - **A new page** → copy any `.njk` file, change the front matter, write the content. It gets the header and footer automatically; add it to `nav` in `src/_data/site.js` to put it in the menu.
 

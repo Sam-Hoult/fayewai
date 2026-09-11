@@ -7,6 +7,7 @@ module.exports = {
   url: 'https://sam-hoult.github.io/fayewai',
   email: 'hi.fayewai@gmail.com',
   linkedin: 'https://www.linkedin.com/in/fayewai/',
+  instagram: 'https://www.instagram.com/fayewai.art/',
 
   /* The nav. Add a page here and it appears in the menu on every page. */
   nav: [
@@ -18,7 +19,7 @@ module.exports = {
 
   footer: {
     heading: 'Commissions are open',
-    body: 'I make art that reflects the spirit of a space — a new home still finding its warmth, a clinic welcoming clients with comfort, a restaurant building an atmosphere worth remembering.',
+    body: 'I accept a small number of commissions for original abstract paintings that reflect the spirit of a space: a new home still finding its warmth, a clinic welcoming clients with comfort, or a restaurant building an atmosphere worth remembering.',
     tagline: 'colour, texture, rhythm, wisdom',
     copyright: '© 2026 Faye Wai. All rights reserved.',
   },

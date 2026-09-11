@@ -1,71 +1,135 @@
 ---
 title: 'Editorial — Faye Wai'
-description: 'Faye Wai’s editorial portfolio — strategic, human-first B2B writing: thought leadership, SEO long-form, and full-funnel content for people-first brands.'
+description: 'Faye Wai — editorial strategy, research and synthesis, campaigns, and content operations. Journalism, technology, and independent research in the Canadian wine sector.'
 ogTitle: 'Editorial — Faye Wai'
-ogDescription: 'Strategic, human-first B2B writing.'
+ogDescription: 'Editorial strategy, research, campaigns, and content operations.'
 ---
 <main id="main">
 <div class="wrap">
 
-  <header class="hero hero--page">
-    <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Editorial portfolio</span></div>
-    <h1 class="display h1--page" style="font-size:clamp(40px,5.6vw,92px);max-width:19ch">Strategic, human-first B2B writing</h1>
-    <div class="hero__intro">
-      <p class="lede" style="max-width:32ch">Thoughtful content and purposeful storytelling shape how we work, connect, and live.</p>
-      <p class="prose">That belief guides everything I create — from long-form thought leadership to full-funnel campaigns that build clarity, trust, and momentum.</p>
+  <header class="hero hero--page grid grid--2" style="align-items:end">
+    <div>
+      <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Editorial · Strategy · Research · Systems</span></div>
+      <h1 class="display h1--page" style="font-size:clamp(38px,5.2vw,84px);max-width:14ch">I find the thread in messy things</h1>
+      <div class="prose" style="margin-top:clamp(24px,3.4vh,38px);max-width:54ch">
+        <p>In a past life — and occasionally in this one — I’ve worked across journalism, technology, editorial strategy, content operations, research, and brand campaigns.</p>
+        <p>I’m happiest somewhere between a giant pile of information and the moment it finally makes sense: finding patterns, asking better questions, building structure, and turning complexity into something useful.</p>
+      </div>
+      <div class="btns" style="margin-top:clamp(28px,4vh,44px)">
+        <a class="btn btn--solid" href="#work">Explore selected work ↓</a>
+        <a class="btn" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="board" data-reveal>
+      <span class="board__label">On the desk</span>
+      <ol class="board__list">
+        {%- for s in editorial.services %}
+        <li>{{ s.title }}</li>
+        {%- endfor %}
+      </ol>
     </div>
   </header>
 
-  <section class="grid grid--2" style="padding:clamp(20px,3vh,40px) 0 clamp(60px,9vh,110px)">
-    <div data-reveal>
-      <span class="eyebrow eyebrow--faint">What I do</span>
-      <div class="prose" style="margin-top:22px;max-width:52ch">
-        <p>I simplify complex ideas — from nebulous workflow trends to go-to-market strategies — to make information more accessible, spark curiosity, and connect audiences to meaningful solutions.</p>
-        <p>Currently I’m Content Operations Manager at <em>People Managing People</em>, an HR publication under Black &amp; White Zebra, collaborating with cross-functional teams on product launches, content strategy, and team enablement.</p>
-        <p>I design workflows and systems that reduce busywork, scale content thoughtfully, and let teams experiment faster.</p>
-      </div>
-      <div class="tiles tiles--2" style="margin-top:clamp(30px,4vh,44px)">
-        <figure><div class="frame r43"><img src="assets/editorial/bwz-team.jpg" alt="Faye with the Black &amp; White Zebra team" loading="lazy"></div><figcaption><span>With the BWZ team</span><span>Vancouver</span></figcaption></figure>
-        <figure><div class="frame r43"><img src="assets/editorial/newsroom.jpg" alt="Faye anchoring in a broadcast studio" loading="lazy" style="object-position:center 35%"></div><figcaption><span>On air</span><span>Hong Kong</span></figcaption></figure>
+  <section class="section--rule" style="padding:clamp(50px,8vh,100px) 0" aria-labelledby="do-h">
+    <div class="section-head section-head--stack" data-reveal>
+      <div>
+        <span class="eyebrow" id="do-h">01 / What I do</span>
+        <h2 class="h2" style="margin-top:14px">Writer by trade. Operator by instinct.</h2>
       </div>
     </div>
-    <div data-reveal>
-      <span class="eyebrow eyebrow--faint">Background</span>
-      <p class="standfirst" style="font-size:clamp(19px,2vw,26px);line-height:1.4;margin-top:22px;color:var(--ink)">A winding path, one clear thread</p>
-      <div class="prose" style="margin-top:18px;max-width:52ch">
-        <p>I began my career chasing stories as a field reporter in Hong Kong’s radio newsrooms, then moved into PR at Ogilvy — learning how narratives are shaped from the inside.</p>
-        <p>After relocating to Canada during the Umbrella Movement, I sought a slower, more intentional pace of work and life. Since then I’ve written for lifestyle and CPG brands, launched products in regulated industries like cannabis and crypto, and now focus on the future of work.</p>
+    <div class="tiles tiles--4" style="margin-top:clamp(26px,4vh,44px)">
+      {%- for s in editorial.services %}
+      <div class="svc" data-reveal>
+        <span class="svc__num">0{{ loop.index }}</span>
+        <h3 class="svc__title">{{ s.title }}</h3>
+        <p class="svc__text">{{ s.text }}</p>
       </div>
-      <div class="kv kv--narrow" style="margin-top:34px">
-        <div class="kv__row"><span class="label">Sectors</span><span>HR · Technology · SaaS · CPG</span></div>
-        <div class="kv__row"><span class="label">Formats</span><span>SEO long-form · Thought leadership · Decks · Webinars · Podcasts</span></div>
-        <div class="kv__row"><span class="label">Based in</span><span>Port Moody, British Columbia</span></div>
+      {%- endfor %}
+    </div>
+    <div style="margin-top:clamp(40px,6vh,64px)" data-reveal>
+      <span class="eyebrow eyebrow--faint" style="display:block">Brands I’ve worked with</span>
+      <div class="cloud" style="margin-top:clamp(18px,2.6vh,26px)">
+        {%- for b in editorial.brands %}
+        <a href="{{ b.href }}" target="_blank" rel="noopener" aria-label="{{ b.name }}">
+          {%- if b.logo %}<img src="assets/editorial/brands/{{ b.logo }}" alt="{{ b.name }}" loading="lazy">{% else %}<span>{{ b.name }}</span>{% endif %}
+        </a>
+        {%- endfor %}
       </div>
     </div>
   </section>
 
-  {#- Both lists below come from _data/editorial.js. -#}
-  <section style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="bylines-h">
-    <div class="section-head section-head--rule" data-reveal>
-      <span class="eyebrow" id="bylines-h">Featured bylines &amp; ghostwriting</span>
-      <span class="small" style="color:var(--faint)">{{ editorial.bylines.length }} selected pieces</span>
+  <section class="section--rule" style="padding:clamp(50px,8vh,100px) 0" aria-labelledby="career-h">
+    <div class="section-head section-head--stack" data-reveal>
+      <div>
+        <span class="eyebrow" id="career-h">02 / A non-linear career, on purpose</span>
+        <h2 class="h2" style="margin-top:14px">I’ve worn a few hats</h2>
+      </div>
     </div>
-    <div style="margin-top:8px" data-reveal>
-      {%- for b in editorial.bylines %}
-      <a class="byline" href="{{ b.href }}" target="_blank" rel="noopener"><span class="byline__pub">{{ b.pub }}</span><span class="byline__title">{{ b.title }}{% if b.note %} <small>{{ b.note }}</small>{% endif %}</span><span class="byline__view">View</span></a>
+    <ol class="track" data-reveal>
+      {%- for t in editorial.timeline %}
+      <li class="track__step">
+        <span class="track__label">{{ t.step }}</span>
+        <span class="track__role">{{ t.role }}</span>
+        <span class="track__where">{{ t.where }}</span>
+      </li>
       {%- endfor %}
+    </ol>
+    <p class="pull" data-reveal style="margin-top:clamp(36px,5vh,56px);max-width:34ch">Different industries, same instinct: understand the system, find what matters, and make it clearer.</p>
+  </section>
+
+  <section class="section--rule grid grid--2" style="padding:clamp(50px,8vh,100px) 0" aria-labelledby="now-h">
+    <div data-reveal>
+      <span class="eyebrow" id="now-h">03 / Currently</span>
+      <p class="pcard__meta" style="margin-top:16px">Recent consulting</p>
+      <h2 class="h2" style="margin-top:14px;max-width:16ch">Turning industry complexity into something usable</h2>
+    </div>
+    <div data-reveal>
+      <div class="prose" style="max-width:52ch">
+        <p>Most recently I’ve been working within the Canadian wine sector on projects spanning interprovincial trade, export-market research, and comparative organisational analysis.</p>
+        <p>The work involves moving between policy, market data, industry structures, stakeholder needs, and dozens of source trails — then synthesising it into practical frameworks, guides, and recommendations.</p>
+      </div>
+      <div class="minis" style="margin-top:clamp(28px,4vh,40px)">
+        {%- for c in editorial.consulting %}
+        <div class="mini">
+          <span class="mini__title">{{ c.title }}</span>
+          <span class="mini__text">{{ c.text }}</span>
+        </div>
+        {%- endfor %}
+      </div>
     </div>
   </section>
 
-  <section style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="brands-h">
-    <div class="section-head section-head--rule" data-reveal>
-      <span class="eyebrow" id="brands-h">360 campaigns &amp; brand work</span>
-      <span class="small" style="color:var(--faint)">Agency &amp; in-house</span>
+  {#- Bylines marked `featured` in _data/editorial.js. -#}
+  <section id="work" class="section--rule" style="padding:clamp(50px,8vh,100px) 0 clamp(60px,9vh,110px)" aria-labelledby="bylines-h">
+    <div class="section-head section-head--stack" data-reveal>
+      <div>
+        <span class="eyebrow" id="bylines-h">04 / Selected bylines</span>
+        <h2 class="h2" style="margin-top:14px">Words in the wild</h2>
+      </div>
     </div>
-    <div class="brands" data-reveal>
-      {%- for b in editorial.brands %}
-      <a href="{{ b.href }}" target="_blank" rel="noopener">{{ b.name }}</a>
-      {%- endfor %}
+    <div class="blist">
+      {%- for b in editorial.bylines %}{% if b.featured %}
+      <a class="bl" href="{{ b.href }}" target="_blank" rel="noopener">
+        <div class="bl__art frame r43{% if b.mark or not b.image %} frame--paper frame--mark{% endif %}">{% if b.image %}<img src="assets/editorial/work/{{ b.image }}" alt="{{ b.alt }}" loading="lazy">{% else %}<span class="frame__name">{{ b.pub }}</span>{% endif %}</div>
+        <div class="bl__in">
+          <span class="bl__pub">{{ b.pub }}</span>
+          <h3 class="bl__title">{{ b.short or b.title }}</h3>
+          <span class="bl__cta">{{ b.cta or 'Read' }} ↗</span>
+        </div>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+  </section>
+
+  <section style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="thread-h">
+    <div class="grid grid--2">
+      <div data-reveal>
+        <h2 class="h2" id="thread-h" style="max-width:12ch">Winding path, clear thread</h2>
+      </div>
+      <div class="prose" data-reveal style="max-width:52ch">
+        <p>Journalism, technology, wine, research, operations, art and poetry can look like very different worlds.</p>
+        <p>To me, they’ve always involved some version of the same practice: paying close attention, noticing patterns, asking questions, and finding a form for what I discover.</p>
+      </div>
     </div>
   </section>
 
@@ -75,12 +139,12 @@ ogDescription: 'Strategic, human-first B2B writing.'
   <div class="panel__in grid grid--2 grid--end">
     <div data-reveal>
       <span class="eyebrow">Work together</span>
-      <h2 class="h2" style="margin-top:22px;max-width:20ch">Content strategy, thought leadership, editorial operations</h2>
+      <h2 class="h2" style="margin-top:22px;max-width:20ch">Research, editorial strategy, content operations</h2>
       <p class="prose prose--dark" style="margin-top:22px;max-width:48ch">Available for select freelance and advisory projects. Say hello with a line about what you’re making.</p>
     </div>
     <div class="btns" data-reveal>
       <a class="btn btn--solid" href="mailto:{{ site.email }}?subject=Editorial%20project">Email Faye</a>
-      <a class="btn" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   </div>
 </section>

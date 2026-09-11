@@ -10,83 +10,69 @@ ogImage: 'assets/art/dancing-whisper.jpg'
 <div class="wrap">
 
   <header class="hero hero--page">
-    <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Studio</span></div>
-    <h1 class="display h1--page">Wondering about everything, wandering everywhere</h1>
-    <div class="hero__intro">
-      <p class="lede">My work is intuitive, abstract, sometimes messy, and always honest.</p>
-      <p class="prose">It’s how I move through emotion, memory, and the parts of myself I can’t explain with words alone. I’m grounded through colour, texture, rhythm, and wisdom.</p>
+    <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Visual art</span></div>
+    <h1 class="display h1--page">I paint to pay attention and stay with a feeling a little longer</h1>
+    <div class="hero__intro hero__intro--media">
+      <div class="frame frame--round r32"><img src="assets/faye-painting.jpg" alt="Faye at an easel in a studio, palette in one hand, brush to the canvas" fetchpriority="high"></div>
+      <div>
+      <p class="lede">Painting asks me to slow down, to work brush by brush. It requires me to respond to what is happening on the canvas, and let the image develop through a conversation rather than a fixed plan.</p>
+      <div class="prose">
+        <p>I’m interested in that moment when something begins to shift: when a colour changes the balance of a piece, when an unexpected mark opens a new direction. The best surprise is when I realise the painting is asking for something different than I intended.</p>
+        <p>Painting, for me, is a practice of noticing, responding, and knowing when to keep going — as well as knowing when to stop.</p>
+        <p><strong>The painting changes as I do.</strong></p>
+      </div>
+      </div>
     </div>
   </header>
 
-  <section class="grid grid--aside" style="padding:clamp(20px,3vh,40px) 0 clamp(60px,9vh,110px)" aria-label="Mediums">
-    <span class="eyebrow eyebrow--faint" data-reveal>Mediums</span>
-    <div class="rows" data-reveal>
-      <a class="row" href="#gallery"><h3>Painting</h3><p>Moody hues and layers built from how I feel — acrylic, plaster, and 3D texture. <span class="go">See the work →</span></p></a>
-      <a class="row" href="poetry.html"><h3>Poetry</h3><p>The little moments and emotions, captured across places and seasons of life. <span class="go">Read →</span></p></a>
-      <div class="row"><h3>Pottery</h3><p>Hands-on, slow work that reminds me to be present.</p></div>
-      <div class="row"><h3>Movement</h3><p>Learning to tune into my body and what it’s trying to say.</p></div>
+  {#- The series shown above the gallery. Everything it needs is in _data/series.js. -#}
+  <section class="section--rule" style="padding:clamp(40px,6vh,70px) 0 clamp(60px,9vh,110px)" aria-labelledby="series-h">
+    <div class="section-head section-head--stack" data-reveal>
+      <div>
+        <span class="eyebrow" id="series-h">Selected works</span>
+        <h2 class="h2" style="margin-top:14px">{{ series.title }}</h2>
+        <p class="section-head__sub">{{ series.meta }}</p>
+      </div>
+    </div>
+    <div class="tiles tiles--5" data-lightbox>
+      {%- for w in series.works %}
+      {{ tile(w, true, '', 'sq') }}
+      {%- endfor %}
     </div>
   </section>
 
-  {#- Every piece in _data/gallery.js, rendered at build time.
-      The filters below just show and hide what is already on the page. -#}
-  <section id="gallery" style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="gallery-h">
-    <div class="section-head section-head--rule" data-reveal>
-      <span class="eyebrow" id="gallery-h">Gallery</span>
-      <span class="small" style="color:var(--faint)">2024—2026</span>
+  {#- The landscape paintings. Edit the list in _data/landscapes.js. -#}
+  <section id="gallery" style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="landscapes-h">
+    <div class="section-head section-head--stack" data-reveal>
+      <h2 class="h2" id="landscapes-h">Landscapes</h2>
     </div>
-    {%- set mediums = gallery | mediums %}
-    {%- if mediums.length > 1 %}
-    <div class="filters" data-reveal data-filters aria-label="Filter by medium">
-      <button type="button" data-type="all" aria-pressed="true">All work</button>
-      {%- for m in mediums %}
-      <button type="button" data-type="{{ m }}" aria-pressed="false">{{ m | capitalize }}</button>
-      {%- endfor %}
-    </div>
-    {%- endif %}
-    <div class="gallery" data-gallery data-lightbox>
-      {%- for w in gallery %}
+    <div class="tiles" data-lightbox style="margin-top:clamp(26px,4vh,44px)">
+      {%- for w in landscapes %}
       {{ tile(w, true) }}
       {%- endfor %}
     </div>
-    <p class="note" data-reveal style="margin-top:22px">Pottery and new paintings are added as they’re finished. Originals and commissions — <a href="mailto:{{ site.email }}" style="color:var(--accent)">email Faye</a>.</p>
+  </section>
+
+  {#- Commissioned work, as a sideways rail. Edit the list in _data/commissions.js. -#}
+  <section style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="commissions-h" data-rail-group>
+    <div class="section-head section-head--stack" data-reveal>
+      <div>
+        <h2 class="h2" id="commissions-h">Custom commissions</h2>
+        <p class="section-head__sub">Made for a space</p>
+      </div>
+      <div class="rail__nav">
+        <button type="button" data-rail-prev aria-label="Previous commissions">&#8592;</button>
+        <button type="button" data-rail-next aria-label="Next commissions">&#8594;</button>
+      </div>
+    </div>
+    <div class="rail" data-rail data-lightbox tabindex="0" role="group" aria-label="Commissioned work" style="margin-top:clamp(26px,4vh,44px)">
+      {%- for w in commissions %}
+      {{ tile(w, true) }}
+      {%- endfor %}
+    </div>
   </section>
 
 </div>
 
-<section class="panel panel--rule" aria-labelledby="origin-h">
-  <div class="panel__in grid grid--origin">
-    <div data-reveal>
-      <span class="eyebrow">Origin</span>
-      <h2 class="h2" id="origin-h" style="font-size:clamp(30px,3.6vw,54px);line-height:1.05;margin-top:22px;max-width:16ch">Finding power in pause</h2>
-      <div class="frame r45" style="margin-top:clamp(28px,4vh,44px);max-width:360px"><img src="assets/photos/vineyard.jpg" alt="Faye harvesting grapes by hand in a vineyard" loading="lazy"></div>
-    </div>
-    <div data-reveal style="max-width:58ch">
-      <p class="lede" style="font-size:clamp(19px,2vw,26px);line-height:1.45">My creative explosion began with grief.</p>
-      <div class="prose prose--dark" style="margin-top:22px">
-        <p>After losing Jai, my dog and constant companion through my teens and twenties, something inside me shifted. I couldn’t keep going the same way — so I didn’t. I stepped away from tech, paused my career, and gave myself permission to wander.</p>
-        <p>What followed were two years of nomadic living across British Columbia.</p>
-      </div>
-      <div class="kv kv--wide kv--blush" style="margin-top:30px">
-        <div class="kv__row"><span class="label">Okanagan Valley</span><span>Harvesting grapes by hand.</span></div>
-        <div class="kv__row"><span class="label">Vancouver Island</span><span>Slowing down in the wild, misty quiet.</span></div>
-        <div class="kv__row"><span class="label">Port Moody</span><span>Settling in a lakeside town that feels like a storybook.</span></div>
-      </div>
-      <div class="prose prose--dark" style="margin-top:26px">
-        <p>Creativity returned not as productivity, but as personal power. As perspective. As presence. Now I create as a form of deep breathing — moments of pause that help me listen more closely to myself and the world around me.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<div class="wrap">
-  <section class="section grid grid--2 grid--end" data-reveal style="padding-bottom:clamp(50px,8vh,100px)">
-    <p class="pull" style="font-size:clamp(21px,2.4vw,32px);line-height:1.45">I’m fascinated by what happens when we create not to perform, but to remember. That softness is strength. That we’re always allowed to begin again.</p>
-    <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
-      <span class="eyebrow">Also writing</span>
-      <p style="font-size:15px;line-height:1.7;color:var(--muted);max-width:36ch">fragments &amp; echoes, a limited-release poetry chapbook, lives on its own page.</p>
-      <a class="btn btn--md" href="poetry.html">Read the poetry →</a>
-    </div>
-  </section>
-</div>
 </main>

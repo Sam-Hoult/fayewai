@@ -10,83 +10,89 @@ ogDescription: 'Artist, poet, and content strategist. Painting, poetry, pottery,
 
   <header class="hero grid grid--hero">
     <div>
-      <div class="eyebrow-rule"><span class="eyebrow">Painting · Poetry · Pottery</span></div>
-      <h1 class="display h1" style="max-width:16ch">Work made to feel, work made to be clear</h1>
-      <p class="standfirst">I’m Faye — an artist and poet, and a content strategist by day. Two practices, one thread: paying close attention.</p>
+      <div class="eyebrow-rule"><span class="eyebrow">Painting · Poetry</span></div>
+      <h1 class="display h1">Painting what I can’t quite say.<br>Writing what I can’t quite paint.</h1>
+      <p class="standfirst" style="font-style:italic">I’m Faye — an artist and poet exploring tenderness, transitions, and the things that resist easy naming.</p>
       <div class="btns">
-        <a class="btn btn--solid" href="art.html">Enter the studio</a>
-        <a class="btn" href="poetry.html">Read the poems</a>
+        <a class="btn btn--solid" href="art.html">Visit the studio</a>
+        <a class="btn" href="poetry.html">Flip through my poetry</a>
       </div>
     </div>
-    <div class="frame frame--paper frame--contain sq"><img src="assets/chapbook-cover.jpg" alt="Cover artwork for fragments &amp; echoes" fetchpriority="high"></div>
+    <div class="frame frame--round r34"><img src="assets/faye-studio.jpg" alt="Faye in her studio, brush in hand, beside a mountain landscape on the easel" fetchpriority="high"></div>
   </header>
 
   <section class="doors" aria-label="Sections">
     <a class="door" href="art.html">
-      <span class="num">01 / STUDIO</span>
-      <h2 class="h3">Creative practice</h2>
-      <p>Abstract painting, pottery, and movement — intuitive, layered, honest.</p>
+      <span class="num">01 / ART</span>
+      <h2 class="h3">Selected Works</h2>
+      <p>Expressive abstraction and landscapes shaped by memory, emotion, and place.</p>
     </a>
     <a class="door" href="poetry.html">
-      <span class="num">02 / WORDS</span>
-      <h2 class="h3">fragments &amp; echoes</h2>
-      <p>A limited-release chapbook on heartbreak, home, and healing.</p>
+      <span class="num">02 / POETRY</span>
+      <h2 class="h3">Poems and readings</h2>
+      <p>Tender musings on identity, belonging, and becoming.</p>
     </a>
     <a class="door" href="editorial.html">
-      <span class="num">03 / DESK</span>
-      <h2 class="h3">Editorial portfolio</h2>
-      <p>Strategy, thought leadership, and B2B storytelling for people-first brands.</p>
+      <span class="num">03 / CURRENT</span>
+      <h2 class="h3">Now &amp; Upcoming</h2>
+      <p>Current shows, readings, workshops, and places to encounter the work.</p>
     </a>
   </section>
 
   {#- The three pieces marked `featured: true` in _data/gallery.js. -#}
   <section class="section section--rule" aria-labelledby="selected">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow" id="selected">Selected work</span>
+    <div class="section-head section-head--stack" data-reveal>
+      <div>
+        <span class="eyebrow" id="selected">Selected work</span>
+        <p class="section-head__sub">Recent and ongoing work across abstraction and landscape.</p>
+      </div>
       <a class="arrow" href="art.html">All work →</a>
     </div>
     <div class="tiles" data-lightbox>
       {%- for w in gallery | featured %}
-      {{ tile(w, true, 'offset' if loop.index0 == 1 else '', 'r34') }}
+      {{ tile(w, true, 'offset' if loop.index0 == 1 else '') }}
       {%- endfor %}
-    </div>
-  </section>
-
-  <section class="section--tall section--rule grid grid--about" id="about" aria-labelledby="about-h">
-    <div data-reveal>
-      <span class="eyebrow">About</span>
-      <div style="margin-top:24px"><div class="frame r34"><img src="assets/faye-portrait.jpg" alt="Faye Wai" loading="lazy" style="object-position:center 30%"></div></div>
-    </div>
-    <div data-reveal style="max-width:60ch">
-      <h2 class="h2" id="about-h" style="max-width:26ch">A curious multi-creative, learning along the way</h2>
-      <div class="prose" style="margin-top:clamp(22px,3vh,34px)">
-        <p>I’m a content strategist and tech analyst who believes in meaningful work and the honest exploration of creativity. By day I work with editorial teams to create clear, search-friendly content that helps people grow their careers.</p>
-        <p>Outside of work I paint abstract art, make pottery, and write poetry — ways of exploring the subtler things words alone can’t hold. My creative practice lives between logic and intuition, weaving memory, emotion, and embodiment into form.</p>
-      </div>
-      <div class="kv" style="margin-top:clamp(34px,5vh,56px)">
-        <div class="kv__row"><span class="label">Listening</span><span>d4vd, Jorja Smith, lo-fi jazz</span></div>
-        <div class="kv__row"><span class="label">Reading</span><span>The Courage to Be Disliked — Ichiro Kishimi</span></div>
-        <div class="kv__row"><span class="label">Making</span><span>Layered, moody art with 3D texture</span></div>
-        <div class="kv__row"><span class="label">Exploring</span><span>Somatics, and the softening of mind into body</span></div>
-      </div>
-      <a class="btn btn--md" href="about.html" style="margin-top:clamp(28px,4vh,40px)">More about Faye →</a>
     </div>
   </section>
 
 </div>
 
-<section class="panel" aria-labelledby="chapbook-h">
+<section class="panel" id="about" aria-labelledby="about-h">
+  <div class="panel__in grid grid--about">
+    <div data-reveal>
+      <span class="eyebrow">About</span>
+      <div style="margin-top:24px"><div class="frame r34"><img src="assets/faye-portrait.jpg" alt="Faye Wai" loading="lazy" style="object-position:center 30%"></div></div>
+    </div>
+    <div data-reveal style="max-width:60ch">
+      <h2 class="h2" id="about-h" style="max-width:26ch">Making a life of becoming</h2>
+      <div class="prose" style="margin-top:clamp(22px,3vh,34px)">
+        <p>I’m Faye — an artist, poet, and curious human from Hong Kong, now based in Port Moody, BC.</p>
+        <p>I’m drawn to the ways a life keeps unfolding through curiosity, change, detours, beginnings, and the plans we never could have planned for. I believe in staying open, becoming a beginner again, and leaving room for whatever comes next.</p>
+        <p><strong>There is always more to become.</strong></p>
+      </div>
+      <a class="btn btn--md" href="about.html" style="margin-top:clamp(28px,4vh,40px)">More about Faye →</a>
+    </div>
+  </div>
+</section>
+
+<section class="panel panel--paper" aria-labelledby="show-h">
   <div class="panel__in grid grid--panel">
     <div data-reveal>
-      <span class="eyebrow">Current project</span>
-      <h2 class="display h2--big" id="chapbook-h">fragments<br><span class="i">&amp; echoes</span></h2>
-      <p class="prose">A limited-release poetry chapbook exploring heartbreak, home, and healing across cities and life chapters.</p>
+      <span class="eyebrow">Current / Upcoming</span>
+      <h2 class="display h2--big" id="show-h">Still,<br><span class="i">Something Glows</span></h2>
+      <p class="show__kind">Solo exhibition</p>
+      <p class="show__when">November 2–15, 2026 · Enabling Arts, Vancouver</p>
+      <p class="prose">An art show and poetry recital exploring the places we carry within us.</p>
+      <div class="dates">
+        <div><span class="d">Nov 7</span><span>Ekphrastic poetry workshop with Lindi Nolte</span></div>
+        <div><span class="d">Nov 11</span><span>Poetry open mic</span></div>
+        <div><span class="d">Nov 15</span><span>Closing reception + artist Q&amp;A</span></div>
+      </div>
       <div class="btns">
-        <a class="btn btn--solid" href="poetry.html">Read poems</a>
-        <a class="btn" href="{{ chapbook.sample }}" target="_blank" rel="noopener">Sample artwork</a>
+        <a class="btn btn--solid" href="https://checkout.square.site/merchant/MLAT7FE9VA7CY/checkout/WOLQREWQVP7RYLYA3UVTGBZP" target="_blank" rel="noopener">Explore the exhibition</a>
       </div>
     </div>
-    <div data-reveal><div class="frame frame--blush frame--contain r34"><img src="assets/chapbook-cover-blush.jpg" alt="fragments &amp; echoes chapbook cover" loading="lazy"></div></div>
+    <div data-reveal><div class="frame frame--paper frame--contain r34"><img src="assets/still-something-glows.jpg" alt="Poster for Still, Something Glows — a solo exhibition by Faye Wai at Enabling Arts, November 2–15, 2026" loading="lazy"></div></div>
   </div>
 </section>
 </main>
