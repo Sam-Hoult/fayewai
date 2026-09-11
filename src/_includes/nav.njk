@@ -7,7 +7,7 @@
       {%- for link in site.nav %}
       <a href="{{ link.href }}"{% if link.href == page.fileSlug + '.html' %} aria-current="page"{% endif %}>{{ link.text }}</a>
       {%- endfor %}
-      <a class="nav__cta" href="mailto:{{ site.email }}">Get in touch</a>
+      <a class="nav__cta" href="mailto:{{ site.email }}" target="_blank" rel="noopener">Get in touch</a>
     </div>
   </div>
 </nav>
