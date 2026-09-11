@@ -1,3 +1,6 @@
-.DS_Store
+_site/
 node_modules/
-.claude/
+.DS_Store
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/

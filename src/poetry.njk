@@ -1,0 +1,92 @@
+---
+title: 'Poetry — Faye Wai'
+description: 'fragments & echoes — a limited-release poetry chapbook by Faye Wai on heartbreak, home, and healing. Read it page by page.'
+ogTitle: 'fragments & echoes — Faye Wai'
+ogDescription: 'A limited-release poetry chapbook on heartbreak, home, and healing.'
+scripts:
+  - js/flipbook.js
+---
+<main id="main">
+<div class="wrap">
+
+  <header class="hero hero--page grid grid--hero grid--hero-poetry">
+    <div>
+      <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Poetry · chapbook 2026</span></div>
+      <h1 class="display h1--tight">fragments<br><span class="i">&amp; echoes</span></h1>
+      <p class="lede" style="color:var(--muted);margin-top:clamp(24px,3.4vh,38px)">A limited-release chapbook on heartbreak, home, and healing — written across cities and life chapters.</p>
+      <div class="btns" style="margin-top:clamp(28px,4vh,44px)">
+        <a class="btn btn--solid" href="#read">Start reading</a>
+        <a class="btn" href="{{ chapbook.sample }}" target="_blank" rel="noopener">Sample artwork</a>
+      </div>
+    </div>
+    <div class="frame frame--paper frame--contain r34"><img src="assets/chapbook-cover.jpg" alt="fragments &amp; echoes chapbook cover" fetchpriority="high"></div>
+  </header>
+
+  <section class="facts" data-reveal aria-label="About the chapbook">
+    <div><span class="label">Themes</span><p>Heartbreak · home · healing</p></div>
+    <div><span class="label">Written</span><p>Hong Kong · Vancouver Island · Port Moody</p></div>
+    <div><span class="label">Release</span><p>Limited run — <a href="mailto:{{ site.email }}?subject=fragments%20%26%20echoes" style="color:var(--accent)">enquire by email</a></p></div>
+  </section>
+
+  {#- The flipbook. Its page list lives in _data/chapbook.js and is handed to
+      js/flipbook.js as JSON below. -#}
+  <section id="read" class="section section--rule" data-reveal style="padding-top:clamp(40px,6vh,80px);padding-bottom:clamp(50px,8vh,100px)" aria-labelledby="read-h">
+    <div class="section-head" style="margin-bottom:0;flex-wrap:wrap;gap:16px">
+      <span class="eyebrow" id="read-h">Read the chapbook</span>
+      <span class="label" data-counter aria-live="polite"></span>
+    </div>
+    <div class="reader" data-stage>
+      <div class="book" data-book>
+        <div class="page page--l" data-page="l"><span class="page__label" data-label></span></div>
+        <div class="page page--r" data-page="r"><span class="page__label" data-label></span></div>
+        <div class="leaf" data-leaf aria-hidden="true">
+          <div class="leaf__face leaf__face--front"></div>
+          <div class="leaf__face leaf__face--back"></div>
+        </div>
+      </div>
+      <div class="reader__status" data-status></div>
+    </div>
+    <div class="reader-bar">
+      <div class="reader-bar__btns">
+        <button class="btn btn--sm" type="button" data-prev>← Back</button>
+        <button class="btn btn--sm" type="button" data-next>Next →</button>
+        <a class="btn btn--sm" data-download hidden download>Download PDF</a>
+      </div>
+      <span class="hint">Drag across the pages, or use ← →</span>
+    </div>
+    <p class="note" data-reader-note style="margin-top:14px">Also on <a href="{{ chapbook.sample }}" target="_blank" rel="noopener">Canva</a>.</p>
+  </section>
+
+  {#- Poems from _data/poems.js. The section only exists once there is one. -#}
+  {%- if poems.length %}
+  <section class="section section--rule" aria-labelledby="poems-h">
+    <div class="section-head section-head--rule">
+      <span class="eyebrow" id="poems-h">Selected poems</span>
+      <span class="small" style="color:var(--faint)">{{ poems.length }} poem{{ 's' if poems.length != 1 }}</span>
+    </div>
+    <div>
+      {%- for p in poems %}
+      <article class="poem" data-reveal>
+        <div>
+          <h3 class="poem__title">{{ p.title }}</h3>
+          {%- set meta = [p.where, p.when] | select | join(' · ') %}
+          {%- if meta %}<p class="poem__meta">{{ meta }}</p>{% endif %}
+        </div>
+        <div class="poem__body">{{ p.body }}</div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="section grid grid--2 grid--end" data-reveal style="padding-top:clamp(50px,8vh,100px);padding-bottom:clamp(40px,6vh,70px)">
+    <p class="pull">The little moments and emotions, captured across places and seasons of life.</p>
+    <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+      <p style="font-size:13px;line-height:1.7;color:var(--faint)">New poems are added as they’re written.</p>
+      <a class="btn btn--md" href="art.html">See the visual art →</a>
+    </div>
+  </section>
+
+</div>
+</main>
+<script>window.CHAPBOOK = {{ chapbook | json | safe }};</script>

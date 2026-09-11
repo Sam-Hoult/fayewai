@@ -10,4 +10,4 @@
      body: 'first line\nsecond line\n\nnext stanza'
    }
 */
-window.POEMS = [];
+module.exports = [];

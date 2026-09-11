@@ -1,0 +1,73 @@
+---
+title: 'About — Faye Wai'
+description: 'Faye Wai is a content strategist, tech analyst and curious multi-creative — painting, pottery and poetry from Port Moody, British Columbia.'
+ogTitle: 'About — Faye Wai'
+ogDescription: 'A curious multi-creative, learning along the way.'
+ogImage: 'assets/faye-portrait.jpg'
+---
+<main id="main">
+<div class="wrap">
+
+  <header class="hero hero--page">
+    <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">About</span></div>
+    <h1 class="display h1--page">A curious multi-creative, learning along the way</h1>
+  </header>
+
+  <section class="grid grid--about" style="padding:0 0 clamp(60px,9vh,110px)">
+    <div data-reveal>
+      <div class="frame r34"><img src="assets/faye-portrait.jpg" alt="Faye Wai" style="object-position:center 30%"></div>
+      <div class="frame r34" style="margin-top:clamp(14px,1.8vw,26px)"><img src="assets/faye-studio.jpg" alt="Faye outdoors in Port Moody" loading="lazy" style="object-position:center 30%"></div>
+    </div>
+    <div data-reveal style="max-width:60ch">
+      <p class="lede">Hi, I’m Faye — a content strategist, tech analyst, and curious human who believes in meaningful work and the honest exploration of creativity.</p>
+      <div class="prose" style="margin-top:clamp(22px,3vh,34px)">
+        <p>By day I work with editorial teams to create clear, search-friendly content that helps people grow their careers. Outside of work I paint abstract art, make pottery, and write poetry — ways I explore the subtler things words alone can’t always hold.</p>
+        <p>My creative practice lives between logic and intuition, weaving memory, emotion, and embodiment into form. This space is where all those parts of me meet: my professional writing portfolio, my art, and my ongoing journey to move through the world with colour, texture, rhythm, and wisdom.</p>
+      </div>
+      <span class="eyebrow eyebrow--faint" style="display:block;margin-top:clamp(34px,5vh,56px)">Journey</span>
+      <div class="prose" style="margin-top:18px">
+        <p>Through it all, the common thread is connection — whether it’s helping someone make sense of their next career move or inviting them to feel something in a brushstroke. I care about the deeper <em>why</em> behind the work we do.</p>
+        <p>These days I’m learning to live beyond job titles. My creative work is intuitive, abstract, sometimes messy, and always honest. It’s an offering, a pause, a reminder that change can be beautiful — not just necessary.</p>
+      </div>
+      <div class="kv" style="margin-top:clamp(34px,5vh,56px)">
+        <div class="kv__row"><span class="label">Listening</span><span>d4vd, Jorja Smith, lo-fi jazz</span></div>
+        <div class="kv__row"><span class="label">Reading</span><span>The Courage to Be Disliked — Ichiro Kishimi</span></div>
+        <div class="kv__row"><span class="label">Making</span><span>Layered, moody art with 3D texture</span></div>
+        <div class="kv__row"><span class="label">Exploring</span><span>Somatics, and the softening of mind into body</span></div>
+        <div class="kv__row"><span class="label">Based in</span><span>Port Moody, British Columbia</span></div>
+      </div>
+    </div>
+  </section>
+
+  {#- Photos from _data/places.js. -#}
+  <section class="section--rule" style="padding:clamp(50px,8vh,100px) 0 clamp(60px,9vh,110px)" aria-labelledby="places-h">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow" id="places-h">Wandering</span>
+      <span class="small" style="color:var(--faint)">Two years across British Columbia, and a little further</span>
+    </div>
+    <div class="tiles tiles--4" data-lightbox>
+      {%- for p in places %}
+      <figure class="work{{ ' offset' if loop.index0 % 2 }}" data-reveal data-full="{{ p.src }}">
+        <div class="frame r34"><img src="{{ p.src }}" alt="{{ p.alt }}" loading="lazy"{% if p.position %} style="object-position:{{ p.position }}"{% endif %}></div>
+        <figcaption><span>{{ p.place }}</span><span>{{ p.note }}</span></figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </section>
+
+</div>
+
+<section class="panel panel--rule">
+  <div class="panel__in grid grid--2 grid--end">
+    <div data-reveal>
+      <span class="eyebrow">Two practices</span>
+      <h2 class="h2" style="margin-top:22px;max-width:20ch">Clear by day, felt by night</h2>
+      <p class="prose prose--dark" style="margin-top:22px;max-width:48ch">The editorial work and the studio work come from the same place: paying close attention, then making something people can hold on to.</p>
+    </div>
+    <div class="btns" data-reveal>
+      <a class="btn btn--solid" href="art.html">See the art</a>
+      <a class="btn" href="editorial.html">Editorial portfolio</a>
+    </div>
+  </div>
+</section>
+</main>

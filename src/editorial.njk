@@ -1,0 +1,87 @@
+---
+title: 'Editorial — Faye Wai'
+description: 'Faye Wai’s editorial portfolio — strategic, human-first B2B writing: thought leadership, SEO long-form, and full-funnel content for people-first brands.'
+ogTitle: 'Editorial — Faye Wai'
+ogDescription: 'Strategic, human-first B2B writing.'
+---
+<main id="main">
+<div class="wrap">
+
+  <header class="hero hero--page">
+    <div class="eyebrow-rule" style="margin-bottom:clamp(26px,4vh,44px)"><span class="eyebrow">Editorial portfolio</span></div>
+    <h1 class="display h1--page" style="font-size:clamp(40px,5.6vw,92px);max-width:19ch">Strategic, human-first B2B writing</h1>
+    <div class="hero__intro">
+      <p class="lede" style="max-width:32ch">Thoughtful content and purposeful storytelling shape how we work, connect, and live.</p>
+      <p class="prose">That belief guides everything I create — from long-form thought leadership to full-funnel campaigns that build clarity, trust, and momentum.</p>
+    </div>
+  </header>
+
+  <section class="grid grid--2" style="padding:clamp(20px,3vh,40px) 0 clamp(60px,9vh,110px)">
+    <div data-reveal>
+      <span class="eyebrow eyebrow--faint">What I do</span>
+      <div class="prose" style="margin-top:22px;max-width:52ch">
+        <p>I simplify complex ideas — from nebulous workflow trends to go-to-market strategies — to make information more accessible, spark curiosity, and connect audiences to meaningful solutions.</p>
+        <p>Currently I’m Content Operations Manager at <em>People Managing People</em>, an HR publication under Black &amp; White Zebra, collaborating with cross-functional teams on product launches, content strategy, and team enablement.</p>
+        <p>I design workflows and systems that reduce busywork, scale content thoughtfully, and let teams experiment faster.</p>
+      </div>
+      <div class="tiles tiles--2" style="margin-top:clamp(30px,4vh,44px)">
+        <figure><div class="frame r43"><img src="assets/editorial/bwz-team.jpg" alt="Faye with the Black &amp; White Zebra team" loading="lazy"></div><figcaption><span>With the BWZ team</span><span>Vancouver</span></figcaption></figure>
+        <figure><div class="frame r43"><img src="assets/editorial/newsroom.jpg" alt="Faye anchoring in a broadcast studio" loading="lazy" style="object-position:center 35%"></div><figcaption><span>On air</span><span>Hong Kong</span></figcaption></figure>
+      </div>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow eyebrow--faint">Background</span>
+      <p class="standfirst" style="font-size:clamp(19px,2vw,26px);line-height:1.4;margin-top:22px;color:var(--ink)">A winding path, one clear thread</p>
+      <div class="prose" style="margin-top:18px;max-width:52ch">
+        <p>I began my career chasing stories as a field reporter in Hong Kong’s radio newsrooms, then moved into PR at Ogilvy — learning how narratives are shaped from the inside.</p>
+        <p>After relocating to Canada during the Umbrella Movement, I sought a slower, more intentional pace of work and life. Since then I’ve written for lifestyle and CPG brands, launched products in regulated industries like cannabis and crypto, and now focus on the future of work.</p>
+      </div>
+      <div class="kv kv--narrow" style="margin-top:34px">
+        <div class="kv__row"><span class="label">Sectors</span><span>HR · Technology · SaaS · CPG</span></div>
+        <div class="kv__row"><span class="label">Formats</span><span>SEO long-form · Thought leadership · Decks · Webinars · Podcasts</span></div>
+        <div class="kv__row"><span class="label">Based in</span><span>Port Moody, British Columbia</span></div>
+      </div>
+    </div>
+  </section>
+
+  {#- Both lists below come from _data/editorial.js. -#}
+  <section style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="bylines-h">
+    <div class="section-head section-head--rule" data-reveal>
+      <span class="eyebrow" id="bylines-h">Featured bylines &amp; ghostwriting</span>
+      <span class="small" style="color:var(--faint)">{{ editorial.bylines.length }} selected pieces</span>
+    </div>
+    <div style="margin-top:8px" data-reveal>
+      {%- for b in editorial.bylines %}
+      <a class="byline" href="{{ b.href }}" target="_blank" rel="noopener"><span class="byline__pub">{{ b.pub }}</span><span class="byline__title">{{ b.title }}{% if b.note %} <small>{{ b.note }}</small>{% endif %}</span><span class="byline__view">View</span></a>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section style="padding:0 0 clamp(60px,9vh,110px)" aria-labelledby="brands-h">
+    <div class="section-head section-head--rule" data-reveal>
+      <span class="eyebrow" id="brands-h">360 campaigns &amp; brand work</span>
+      <span class="small" style="color:var(--faint)">Agency &amp; in-house</span>
+    </div>
+    <div class="brands" data-reveal>
+      {%- for b in editorial.brands %}
+      <a href="{{ b.href }}" target="_blank" rel="noopener">{{ b.name }}</a>
+      {%- endfor %}
+    </div>
+  </section>
+
+</div>
+
+<section class="panel panel--rule">
+  <div class="panel__in grid grid--2 grid--end">
+    <div data-reveal>
+      <span class="eyebrow">Work together</span>
+      <h2 class="h2" style="margin-top:22px;max-width:20ch">Content strategy, thought leadership, editorial operations</h2>
+      <p class="prose prose--dark" style="margin-top:22px;max-width:48ch">Available for select freelance and advisory projects. Say hello with a line about what you’re making.</p>
+    </div>
+    <div class="btns" data-reveal>
+      <a class="btn btn--solid" href="mailto:{{ site.email }}?subject=Editorial%20project">Email Faye</a>
+      <a class="btn" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>

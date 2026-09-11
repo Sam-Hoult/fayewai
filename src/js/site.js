@@ -1,4 +1,4 @@
-/* Faye Wai — shared behaviour: nav, scroll reveals, gallery rendering, lightbox. */
+/* Faye Wai — shared behaviour: nav, scroll reveals, gallery filters, lightbox. */
 (function () {
   'use strict';
   document.documentElement.classList.remove('no-js');
@@ -12,12 +12,6 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
-  var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  [].forEach.call(document.querySelectorAll('.nav__links a'), function (a) {
-    var href = (a.getAttribute('href') || '').toLowerCase();
-    if (href === here) a.setAttribute('aria-current', 'page');
-  });
-
   /* ---------- Scroll reveals ----------
      Rect sweep on scroll/resize plus a 1600ms fallback that reveals
      everything if nothing has fired (keeps a slow page from being blank). */
@@ -41,28 +35,28 @@
     }, 1600);
   }
 
-  /* ---------- Gallery ---------- */
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  /* ---------- Gallery filters ----------
+     Every piece is already in the page (Eleventy renders it from _data/gallery.js).
+     Filtering just shows and hides what is there, so the lightbox and the
+     reveal animations keep working untouched. */
+  function startFilters() {
+    var bar = document.querySelector('[data-filters]');
+    var grid = document.querySelector('[data-gallery]');
+    if (!bar || !grid) return;
+    var figs = [].slice.call(grid.querySelectorAll('.work'));
+    bar.addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-type]');
+      if (!btn) return;
+      var type = btn.dataset.type;
+      figs.forEach(function (f) {
+        f.hidden = type !== 'all' && f.dataset.type !== type;
+      });
+      [].forEach.call(bar.querySelectorAll('button'), function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      sweep();
     });
   }
-  function workHTML(w) {
-    if (w.placeholder) {
-      return '<figure class="work work--placeholder" style="cursor:default">' +
-        '<div class="placeholder"><span>' + esc(w.label || 'coming soon') + '</span></div>' +
-        '<figcaption><span class="work__title">' + esc(w.title) + '</span><span>' + esc(w.meta || 'Coming') + '</span></figcaption></figure>';
-    }
-    var frame = 'frame ' + (w.ratio || 'sq') + (w.contain ? ' frame--contain frame--paper' : '');
-    return '<figure class="work" tabindex="0" role="button" aria-label="View ' + esc(w.title) + '" data-full="' + esc(w.full || w.src) + '">' +
-      '<div class="' + frame + '"><img src="' + esc(w.src) + '" alt="' + esc(w.alt || w.title) + '" loading="lazy"' + (w.position ? ' style="object-position:' + esc(w.position) + '"' : '') + '></div>' +
-      '<figcaption><span class="work__title">' + esc(w.title) + '</span><span>' + esc(w.meta || '') + '</span></figcaption></figure>';
-  }
-  window.renderGallery = function (container, items) {
-    if (!container) return;
-    container.innerHTML = items.map(workHTML).join('');
-    bindLightbox(container);
-  };
 
   /* ---------- Lightbox ---------- */
   var lb, lbImg, lbTitle, lbMeta, lbCount, current = { list: [], i: 0 };
@@ -124,25 +118,32 @@
     lb.classList.remove('is-open');
     document.body.style.overflow = '';
   }
-  function collect(container) {
-    return [].map.call(container.querySelectorAll('.work:not(.work--placeholder)'), function (f) {
-      var img = f.querySelector('img');
-      var caps = f.querySelectorAll('figcaption span');
-      return {
-        full: f.getAttribute('data-full') || (img && img.src),
-        alt: img ? img.alt : '',
-        title: caps[0] ? caps[0].textContent : '',
-        meta: caps[1] ? caps[1].textContent : ''
-      };
+  /* Only what is on screen right now — a filtered-out piece should not turn up
+     when you arrow through the lightbox. */
+  function visible(container) {
+    return [].filter.call(container.querySelectorAll('.work:not(.work--placeholder)'), function (f) {
+      return !f.hidden;
     });
   }
+  function describe(f) {
+    var img = f.querySelector('img');
+    var caps = f.querySelectorAll('figcaption span');
+    return {
+      full: f.getAttribute('data-full') || (img && img.src),
+      alt: img ? img.alt : '',
+      title: caps[0] ? caps[0].textContent : '',
+      meta: caps[1] ? caps[1].textContent : ''
+    };
+  }
   function bindLightbox(container) {
-    var figs = [].slice.call(container.querySelectorAll('.work:not(.work--placeholder)'));
-    figs.forEach(function (f, i) {
+    [].forEach.call(container.querySelectorAll('.work:not(.work--placeholder)'), function (f) {
       if (f.__lb) return;
       f.__lb = true;
       f.setAttribute('tabindex', '0');
-      function open() { openLightbox(collect(container), i); }
+      function open() {
+        var figs = visible(container);
+        openLightbox(figs.map(describe), figs.indexOf(f));
+      }
       f.addEventListener('click', open);
       f.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
     });
@@ -151,6 +152,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     [].forEach.call(document.querySelectorAll('[data-lightbox]'), bindLightbox);
+    startFilters();
     startReveals();
   });
 })();
