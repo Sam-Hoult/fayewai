@@ -1,0 +1,2015 @@
+{
+  "meta": {
+    "version": 1,
+    "nodeCount": 77,
+    "edgeCount": 149,
+    "languages": [
+      "javascript"
+    ],
+    "scopes": [
+      {
+        "prefix": "",
+        "label": "",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "id": "eleventy.config.js",
+      "name": "eleventy.config.js",
+      "kind": "file",
+      "path": "eleventy.config.js",
+      "span": "L1-L42",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "216c885fdc44f526aff8cf25e11515daf63fde890e5f5a89458ba25e342d96d3",
+      "chars": 1568,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/chapbook.js",
+      "name": "chapbook.js",
+      "kind": "file",
+      "path": "src/_data/chapbook.js",
+      "span": "L1-L46",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "e209c0df569705ecc2885279b8cb9ce00ec51518555bfbd8234074990b6a45f1",
+      "chars": 1513,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/commissions.js",
+      "name": "commissions.js",
+      "kind": "file",
+      "path": "src/_data/commissions.js",
+      "span": "L1-L15",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "b342503ca5166093be303467b9db569ffd09a8037d48f4cded76796129e01ddd",
+      "chars": 1370,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/curious.js",
+      "name": "curious.js",
+      "kind": "file",
+      "path": "src/_data/curious.js",
+      "span": "L1-L12",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "5b08565cf20674c277f2660d0c56ab7932ab171654e6aaee7c0436b456f9aebf",
+      "chars": 543,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/editorial.js",
+      "name": "editorial.js",
+      "kind": "file",
+      "path": "src/_data/editorial.js",
+      "span": "L1-L160",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "1c493df6f2130b502a5796d755bc66a1a9aa26296526fab7eca375c2903ce8b8",
+      "chars": 7791,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/gallery.js",
+      "name": "gallery.js",
+      "kind": "file",
+      "path": "src/_data/gallery.js",
+      "span": "L1-L23",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4ef76b4b0df25026c77adee83a41e40db7323a097d5c1e512109575bec17416f",
+      "chars": 2926,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/landscapes.js",
+      "name": "landscapes.js",
+      "kind": "file",
+      "path": "src/_data/landscapes.js",
+      "span": "L1-L12",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "c6835f1c5708946ca6ded338a1f80a8d6b454c619c993fc36340b62e9e2c3101",
+      "chars": 985,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/places.js",
+      "name": "places.js",
+      "kind": "file",
+      "path": "src/_data/places.js",
+      "span": "L1-L15",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "d37dea69bb78976026d90d80f68f019a4624b1ec2585fb33fafbc38b01f30e73",
+      "chars": 1321,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/poems.js",
+      "name": "poems.js",
+      "kind": "file",
+      "path": "src/_data/poems.js",
+      "span": "L1-L507",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "7b2404d63f43be98b476bcd3bfe9ad4d95a619e1b77214362d74c9b90a19ac36",
+      "chars": 11125,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/readings.js",
+      "name": "readings.js",
+      "kind": "file",
+      "path": "src/_data/readings.js",
+      "span": "L1-L13",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "440cb6bb08210e2718d309078e119ec26351afc80ec12aa32a7d3e0c91d490bb",
+      "chars": 475,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/series.js",
+      "name": "series.js",
+      "kind": "file",
+      "path": "src/_data/series.js",
+      "span": "L1-L22",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "0a0b82b4395486f28dbbfdb1702542e4e730434e478fed24a85f164d681e82f5",
+      "chars": 1566,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/site.js",
+      "name": "site.js",
+      "kind": "file",
+      "path": "src/_data/site.js",
+      "span": "L1-L30",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "157db675894a3d64b1d49fee035d10b40015f3f6017f77fd52f344c85e7f2771",
+      "chars": 1321,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/stage.js",
+      "name": "stage.js",
+      "kind": "file",
+      "path": "src/_data/stage.js",
+      "span": "L1-L18",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "922178c9599f3a6558b31f72feebe3f61116217a230e022da55ef8eec149f54d",
+      "chars": 1106,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/_data/workshop.js",
+      "name": "workshop.js",
+      "kind": "file",
+      "path": "src/_data/workshop.js",
+      "span": "L1-L14",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "4f54778252fc3a21e7e99179057726bb0a95370778b727a69dc7aa40acc0eac6",
+      "chars": 708,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js",
+      "name": "flipbook.js",
+      "kind": "file",
+      "path": "src/js/flipbook.js",
+      "span": "L1-L208",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "32b6246705f410f7af7ad3ab8c1f658d426f843b37658040294c9880d52e54a5",
+      "chars": 8483,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#$",
+      "name": "$",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L10-L10",
+      "signature": "$ = function (s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "9b6acb672389615789675300cadf3e4fd1cc616fa7921367a5c27bf19ec6ca9a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#count",
+      "name": "count",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L23-L23",
+      "signature": "function count()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "50a76abd46b4ed9702ea147875fa235a65ececb55a7d207ea640bfd9d6eb4674",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#ensure",
+      "name": "ensure",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L101-L106",
+      "signature": "function ensure(i)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "4c3adbc06705ce714a2ca62400f7a5fabaa38e6ebc27a2417bda32fbe110677b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#fill",
+      "name": "fill",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L30-L56",
+      "signature": "function fill(el, i)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "45b8894e134773295a2aca7fc35bfbf5739ac493a0c6e616dae07ae5415cbad3",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#go",
+      "name": "go",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L74-L93",
+      "signature": "function go(dir)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "717776f56cc9e06d01fa4f701cc7a738af9cb785f5e607da11923927fcc1ec5b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#idxL",
+      "name": "idxL",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L25-L25",
+      "signature": "function idxL(s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "bc9d89b2844c548d128e8826d34756b8e7b9ed529d4bf1f9d6ede9cf15c87d7f",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#idxR",
+      "name": "idxR",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L26-L26",
+      "signature": "function idxR(s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e59824ad984096eee9ed534ca90097c3e9ec5278c98fa781a5fed40f6dd0f099",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#loadScript",
+      "name": "loadScript",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L152-L156",
+      "signature": "function loadScript(u, cb)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "40666d7ed62cb2aac54f26712b13a72fc72d3e5db0ab0efe3cd50c03814dde27",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#paint",
+      "name": "paint",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L58-L72",
+      "signature": "function paint()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "a4cbbd3f8c0b08948066dde3ea2540e3b10bc60ac21751d64238259b61e9645a",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#prefetch",
+      "name": "prefetch",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L96-L100",
+      "signature": "function prefetch()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "5cc82e063f2cce9b420507529ef4b5370f031240f75258d65225db1c651428a6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#pump",
+      "name": "pump",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L107-L132",
+      "signature": "function pump()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "25ff00465b9d7f149365b88dc207da0fab5dd7867389df16533fbb739e11f977",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#ready",
+      "name": "ready",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L136-L141",
+      "signature": "function ready(url)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "b03d0e9e7c5d4b8730798dd8d7dece69d8ad769b7573213419b7b07bf8359965",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#setRatio",
+      "name": "setRatio",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L133-L135",
+      "signature": "function setRatio(r)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "0d791d045e62abd6cffd5681734674542533b16c96a8b4ff24cd6177ca129520",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#setStatus",
+      "name": "setStatus",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L28-L28",
+      "signature": "function setStatus(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "8b0e92133d3c5f377b47b259154cf141c72a647d1000243aab09b8c674efe70e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#spreads",
+      "name": "spreads",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L24-L24",
+      "signature": "function spreads()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "ea1a5b1965a082ac19adc9c15ff7d33745c38678cf58269c9ef90f39c8a7ae21",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#useImages",
+      "name": "useImages",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L142-L151",
+      "signature": "function useImages(list)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "748d4e1c56e11d3e42d1b0bf0fe7314fba84b9036a7639e10d77e32b43c53547",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#usePdf",
+      "name": "usePdf",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L157-L177",
+      "signature": "function usePdf(url)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "01324ae4cd9f444eb93ace85c5560a4e5707332c9b91517bdb3157420e64695c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/flipbook.js#valid",
+      "name": "valid",
+      "kind": "function",
+      "path": "src/js/flipbook.js",
+      "span": "L27-L27",
+      "signature": "function valid(i)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "7dfd6dccf5023ccaabf1670537475ca9502bb9c5f17346d7cf1356e3fbf03b24",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js",
+      "name": "poems.js",
+      "kind": "file",
+      "path": "src/js/poems.js",
+      "span": "L1-L117",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "f1edd24069e2fd530e5a6368132ffaba55a38a9a79b18ca7d2a50c8db6d76996",
+      "chars": 4992,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js#build",
+      "name": "build",
+      "kind": "function",
+      "path": "src/js/poems.js",
+      "span": "L13-L50",
+      "signature": "function build()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "bf3880bef83855fdbc670a603f222c1e9ce0b21f23877e59faae22f6572d6bd5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js#close",
+      "name": "close",
+      "kind": "function",
+      "path": "src/js/poems.js",
+      "span": "L82-L90",
+      "signature": "function close(push)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "f8b842225dc0cf51084042cec0800856fca020636489bfe4caadb63e1149a9fc",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js#fromHash",
+      "name": "fromHash",
+      "kind": "function",
+      "path": "src/js/poems.js",
+      "span": "L98-L104",
+      "signature": "function fromHash()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "fdaeaaef9a4b9d1ca65a1cf2dd536aa3e400646989c76da0a209195fe6d3c033",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js#open",
+      "name": "open",
+      "kind": "function",
+      "path": "src/js/poems.js",
+      "span": "L70-L80",
+      "signature": "function open(i, push)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c4f9257f4b04856594e375c405a98e21f063992bc6c5be4fa776828cbedc5f13",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js#render",
+      "name": "render",
+      "kind": "function",
+      "path": "src/js/poems.js",
+      "span": "L52-L68",
+      "signature": "function render()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "28d4e549c2041c4bae2cb4fa683cc0d2fb350e8434a07e6df5790bb232a70b18",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/poems.js#step",
+      "name": "step",
+      "kind": "function",
+      "path": "src/js/poems.js",
+      "span": "L92-L96",
+      "signature": "function step(d)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3dd1ee5d5cd36f87d1f357956fb1d0df81981a06623e748e315476c10612297c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js",
+      "name": "site.js",
+      "kind": "file",
+      "path": "src/js/site.js",
+      "span": "L1-L188",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "646b3ad034f4d1c3020ccb672305c6ee5ef75e8ad5c064f8c4378d7f36f60074",
+      "chars": 7804,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#bindLightbox",
+      "name": "bindLightbox",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L166-L178",
+      "signature": "function bindLightbox(container)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "dc03b0ac70609aacbabc559a55e504656068002acd84f1bfe9d03b75f4a51242",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#bindLightbox.open",
+      "name": "open",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L171-L174",
+      "signature": "function open()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "e98f36e48cba5e392736461e02d1e7d9634894b0d30da28a3e6d6ce85884bf94",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#buildLightbox",
+      "name": "buildLightbox",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L63-L91",
+      "signature": "function buildLightbox()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3733d89a463d150f6840f1b8505c8977784d239b4d58a839e117a89a5a9afda0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#closeLightbox",
+      "name": "closeLightbox",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L116-L120",
+      "signature": "function closeLightbox()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "a9bbfcaf8c7ea16f83636ccc59723b1ca04a2ac7ad014ddf1921e15ff5e2435d",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#describe",
+      "name": "describe",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L128-L137",
+      "signature": "function describe(f)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d245512748babda03d93c8898b7761396c02c8c62a286a7e245b13e1d9178039",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#openLightbox",
+      "name": "openLightbox",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L108-L115",
+      "signature": "function openLightbox(list, i)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "f3c47254b1f8edacf30a7c187b4ad1e4aff5b8ea74e4d8d582024d5df1b1039c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#render",
+      "name": "render",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L92-L102",
+      "signature": "function render()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "60141a50ed2995ab353bd1fc95fcd4656eb77d70af05c9523f2495a5c4fad6bb",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#show",
+      "name": "show",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L19-L19",
+      "signature": "function show(el)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3afc32e30eb48821c2465a1346f323896ec8ab21a2dec26b3d0ff066d71366ac",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#startFilters",
+      "name": "startFilters",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L42-L59",
+      "signature": "function startFilters()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "d1d67bf72fd57f48881cf3897d6c4b009e17bde5cd7ed790c2fe03ba2d96eacd",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#startRails",
+      "name": "startRails",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L141-L164",
+      "signature": "function startRails()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "86ac38827e0a52ff66fe6c46e2ea9edac9b8aaec0a99debff835819217c1f7f1",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#startRails.step",
+      "name": "step",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L149-L151",
+      "signature": "function step(dir)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "bc2938fa434e6c4921bd73eb9e22dd11a088d37500df5f60d8b424c8a0f4ead6",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#startRails.sync",
+      "name": "sync",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L152-L157",
+      "signature": "function sync()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "7ba0763ea0439597d43fc0b1fd90f3b6538e6f1672d3e541b030e1f52d88785e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#startReveals",
+      "name": "startReveals",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L28-L36",
+      "signature": "function startReveals()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "483d4ee297f64897e49d29c10b3bc974c8194bf2d2c37959579fd6cb67b696f2",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#step",
+      "name": "step",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L103-L107",
+      "signature": "function step(d)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "5e4184b4d8f8ee550329312ef7c7a3f6eca169f52cc7c5a9a8d92541b2ec004c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#sweep",
+      "name": "sweep",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L20-L27",
+      "signature": "function sweep()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "4f534f1fa31c12f3cec69947fb656d02d0f8dc85bac842207cc8b30666ec175e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/site.js#visible",
+      "name": "visible",
+      "kind": "function",
+      "path": "src/js/site.js",
+      "span": "L123-L127",
+      "signature": "function visible(container)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "901598435b426e074bb8a8f3ce4262c869ab3f49b9aa27f3a155dd7caf4cf0f9",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme-default.js",
+      "name": "theme-default.js",
+      "kind": "file",
+      "path": "src/js/theme-default.js",
+      "span": "L1-L7",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "084ab99ae8d8a52971175950f6c174860bd60558810497b2a1f95a271673739d",
+      "chars": 331,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js",
+      "name": "theme.js",
+      "kind": "file",
+      "path": "src/js/theme.js",
+      "span": "L1-L158",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "51968cce913f8c995bd06953ec99985d85ac8812ab1b5e13ef78e4f0ff8e8ad7",
+      "chars": 11233,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#apply",
+      "name": "apply",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L46-L58",
+      "signature": "function apply(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "445318e8b89009891deb58f610a815a4592c6dc5c398a39ce435bc1e5e1c70b5",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#build",
+      "name": "build",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L77-L137",
+      "signature": "function build()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "7b2def52465a181f0e94a72303a5226824fffef95f6b4be69329e1d7f2317422",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#build.done",
+      "name": "done",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L125-L125",
+      "signature": "done = function ()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "0d6b1b97ad9f4135bad69c327f5b940a15d39cface1eef2cdfbd90defb51cb6e",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#build.setMail",
+      "name": "setMail",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L132-L135",
+      "signature": "function setMail()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "cd9f4df1de4db9140e7c175c39e77100b04153d901fbada6aec72162f4189528",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#diff",
+      "name": "diff",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L59-L59",
+      "signature": "function diff(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "cbe8bfc3e746db2dd93dec39f9795653bd839c69c12b73af1e465aedad7a45ea",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#esc",
+      "name": "esc",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L75-L75",
+      "signature": "function esc(s)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "b130e4c500507cd3a785a4d5e401ed6eff9aa89e160aae1f8899fff462b1f9e4",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#fromUrl",
+      "name": "fromUrl",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L62-L65",
+      "signature": "function fromUrl()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "28d670f24e310909024f1bbcf22f4cd86760c9482b567cee15df45a69b22164c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#hexRgb",
+      "name": "hexRgb",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L36-L36",
+      "signature": "function hexRgb(h)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "ccbaccf2e3d654c2733cc24fd272d08074534442b5343279e2b4c405eae97b20",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#loadFont",
+      "name": "loadFont",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L38-L45",
+      "signature": "function loadFont(name, map)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "c42d0583bba719c8b16b775878c80c07f0784c90640a3e5b20fb68c32143383b",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#merged",
+      "name": "merged",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L37-L37",
+      "signature": "function merged(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "5759fdc4f59db37151adf47e5c88dd4784cea897d70b732c5137936dac0c5ac1",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#options",
+      "name": "options",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L76-L76",
+      "signature": "function options(map, sel)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "2bd0163e5d71349cbe2ff6fffd1ecd5f6db33688986562811c72617d74e19917",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#read",
+      "name": "read",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L60-L60",
+      "signature": "function read()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "8631498bb752c0df443de8663b6091ab1cf2c04bf6901f213e40395733ff5e20",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#say",
+      "name": "say",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L145-L145",
+      "signature": "function say(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "3b9a730e252ee26640d5e727f7cfc26cf8adbfd7f806b0e16f57c72e2eefb402",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#sync",
+      "name": "sync",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L138-L144",
+      "signature": "function sync()",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "0d5efe3dd5dd6674352179f3710839cec4e0ba9d1c4406a3b984b198c9dd9a5c",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#toggle",
+      "name": "toggle",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L146-L151",
+      "signature": "function toggle(open)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "dd501b6cadb0c1981ecd3dd248b820f7e852cf65d3904aa435f8cabdea20b095",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#toParam",
+      "name": "toParam",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L66-L66",
+      "signature": "function toParam(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "1e411e0ad9f48b91ac4c884e012ed68e920f87abbbb3bb168a1cec9940fd7911",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/js/theme.js#write",
+      "name": "write",
+      "kind": "function",
+      "path": "src/js/theme.js",
+      "span": "L61-L61",
+      "signature": "function write(t)",
+      "exported": false,
+      "origin": "ast",
+      "body_hash": "4b3e352a56c10bb320d12325456560c9976c3ab21a4fcb964a9a7cdec8f48da0",
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    },
+    {
+      "id": "src/src.11tydata.js",
+      "name": "src.11tydata.js",
+      "kind": "file",
+      "path": "src/src.11tydata.js",
+      "span": "L1-L8",
+      "signature": null,
+      "exported": true,
+      "origin": "ast",
+      "body_hash": "9d7e252edfc00dc7ef8fd98080665e8d2fd1863a9ed2991afb814b36827d0d14",
+      "chars": 288,
+      "summary_state": "pending",
+      "summary": null,
+      "crux": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#$",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#go",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#paint",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#useImages",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#usePdf",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#$",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#count",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#ensure",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#fill",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#go",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#idxL",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#idxR",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#loadScript",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#paint",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#prefetch",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#pump",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#ready",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#setRatio",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#setStatus",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#spreads",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#useImages",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#usePdf",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js",
+      "target": "src/js/flipbook.js#valid",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#ensure",
+      "target": "src/js/flipbook.js#pump",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#fill",
+      "target": "src/js/flipbook.js#ensure",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#fill",
+      "target": "src/js/flipbook.js#valid",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#go",
+      "target": "src/js/flipbook.js#fill",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#go",
+      "target": "src/js/flipbook.js#idxL",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#go",
+      "target": "src/js/flipbook.js#idxR",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#go",
+      "target": "src/js/flipbook.js#paint",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#go",
+      "target": "src/js/flipbook.js#spreads",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#loadScript",
+      "target": "src/js/flipbook.js#setStatus",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#paint",
+      "target": "src/js/flipbook.js#fill",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#paint",
+      "target": "src/js/flipbook.js#idxL",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#paint",
+      "target": "src/js/flipbook.js#idxR",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#paint",
+      "target": "src/js/flipbook.js#prefetch",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#paint",
+      "target": "src/js/flipbook.js#spreads",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#prefetch",
+      "target": "src/js/flipbook.js#ensure",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#prefetch",
+      "target": "src/js/flipbook.js#idxL",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#prefetch",
+      "target": "src/js/flipbook.js#idxR",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#prefetch",
+      "target": "src/js/flipbook.js#valid",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#pump",
+      "target": "src/js/flipbook.js#fill",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#pump",
+      "target": "src/js/flipbook.js#idxL",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#pump",
+      "target": "src/js/flipbook.js#idxR",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#pump",
+      "target": "src/js/flipbook.js#pump",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#pump",
+      "target": "src/js/flipbook.js#setStatus",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#ready",
+      "target": "src/js/flipbook.js#paint",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#ready",
+      "target": "src/js/flipbook.js#setStatus",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#spreads",
+      "target": "src/js/flipbook.js#count",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#useImages",
+      "target": "src/js/flipbook.js#ready",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#useImages",
+      "target": "src/js/flipbook.js#setRatio",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#usePdf",
+      "target": "src/js/flipbook.js#ensure",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#usePdf",
+      "target": "src/js/flipbook.js#loadScript",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#usePdf",
+      "target": "src/js/flipbook.js#paint",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#usePdf",
+      "target": "src/js/flipbook.js#ready",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#usePdf",
+      "target": "src/js/flipbook.js#setRatio",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#usePdf",
+      "target": "src/js/flipbook.js#setStatus",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/flipbook.js#valid",
+      "target": "src/js/flipbook.js#count",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#fromHash",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#open",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#build",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#close",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#fromHash",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#open",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#render",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js",
+      "target": "src/js/poems.js#step",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#build",
+      "target": "src/js/poems.js#close",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#build",
+      "target": "src/js/poems.js#step",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#fromHash",
+      "target": "src/js/poems.js#close",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#fromHash",
+      "target": "src/js/poems.js#open",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#open",
+      "target": "src/js/poems.js#build",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#open",
+      "target": "src/js/poems.js#render",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/poems.js#step",
+      "target": "src/js/poems.js#open",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#startFilters",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#startRails",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#startReveals",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#bindLightbox",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#buildLightbox",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#closeLightbox",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#describe",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#openLightbox",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#render",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#show",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#startFilters",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#startRails",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#startReveals",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#step",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#sweep",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js",
+      "target": "src/js/site.js#visible",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#bindLightbox",
+      "target": "src/js/site.js#bindLightbox.open",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#bindLightbox",
+      "target": "src/js/site.js#bindLightbox.open",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#bindLightbox.open",
+      "target": "src/js/site.js#openLightbox",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#bindLightbox.open",
+      "target": "src/js/site.js#visible",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#buildLightbox",
+      "target": "src/js/site.js#closeLightbox",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#openLightbox",
+      "target": "src/js/site.js#buildLightbox",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#openLightbox",
+      "target": "src/js/site.js#render",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#startFilters",
+      "target": "src/js/site.js#sweep",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#startRails",
+      "target": "src/js/site.js#startRails.sync",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#startRails",
+      "target": "src/js/site.js#startRails.step",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#startRails",
+      "target": "src/js/site.js#startRails.sync",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#startReveals",
+      "target": "src/js/site.js#sweep",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#step",
+      "target": "src/js/site.js#render",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/site.js#sweep",
+      "target": "src/js/site.js#show",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#apply",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#build",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#fromUrl",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#merged",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#read",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#say",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#toggle",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#apply",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#build",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#diff",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#esc",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#fromUrl",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#hexRgb",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#loadFont",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#merged",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#options",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#read",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#say",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#sync",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#toggle",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#toParam",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js",
+      "target": "src/js/theme.js#write",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#apply",
+      "target": "src/js/theme.js#hexRgb",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#apply",
+      "target": "src/js/theme.js#loadFont",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#apply",
+      "target": "src/js/theme.js#merged",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#apply",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#diff",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#esc",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#merged",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#options",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#say",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#sync",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#toggle",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#toParam",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#write",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#build.done",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build",
+      "target": "src/js/theme.js#build.setMail",
+      "relation": "contains",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build.done",
+      "target": "src/js/theme.js#say",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build.setMail",
+      "target": "src/js/theme.js#diff",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#build.setMail",
+      "target": "src/js/theme.js#toParam",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#options",
+      "target": "src/js/theme.js#esc",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#toggle",
+      "target": "src/js/theme.js#build",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#toggle",
+      "target": "src/js/theme.js#read",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#toggle",
+      "target": "src/js/theme.js#say",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#toggle",
+      "target": "src/js/theme.js#sync",
+      "relation": "calls",
+      "confidence": "extracted"
+    },
+    {
+      "source": "src/js/theme.js#toParam",
+      "target": "src/js/theme.js#diff",
+      "relation": "calls",
+      "confidence": "extracted"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# src/js/site.js
+
+- show · function · L19-L19 — function show(el)
+- sweep · function · L20-L27 — function sweep()
+- startReveals · function · L28-L36 — function startReveals()
+- startFilters · function · L42-L59 — function startFilters()
+- buildLightbox · function · L63-L91 — function buildLightbox()
+- render · function · L92-L102 — function render()
+- step · function · L103-L107 — function step(d)
+- openLightbox · function · L108-L115 — function openLightbox(list, i)
+- closeLightbox · function · L116-L120 — function closeLightbox()
+- visible · function · L123-L127 — function visible(container)
+- describe · function · L128-L137 — function describe(f)
+- startRails · function · L141-L164 — function startRails()
+- step · function · L149-L151 — function step(dir)
+- sync · function · L152-L157 — function sync()
+- bindLightbox · function · L166-L178 — function bindLightbox(container)
+- open · function · L171-L174 — function open()
