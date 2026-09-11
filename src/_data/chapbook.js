@@ -5,7 +5,7 @@
      2. `pdf`   — a PDF at site/chapbook/fragments-and-echoes.pdf, rendered in the browser (also adds a Download button)
    To replace the pages with the real chapbook PDF: drop the PDF in, then empty the `pages` list below.
 */
-window.CHAPBOOK = {
+module.exports = {
   pdf: 'chapbook/fragments-and-echoes.pdf',
   pages: [
     'chapbook/pages/01.jpg',

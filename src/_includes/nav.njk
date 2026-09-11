@@ -1,0 +1,13 @@
+{#- The header. Edit the links in _data/site.js, not here. -#}
+<nav class="nav" aria-label="Main">
+  <div class="nav__in">
+    <a class="brand" href="index.html"><img class="brand__mark" src="assets/mark.jpg" alt="" width="128" height="128"><span class="brand__name">{{ site.name }}</span></a>
+    <button class="nav__toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
+    <div class="nav__links">
+      {%- for link in site.nav %}
+      <a href="{{ link.href }}"{% if link.href == page.fileSlug + '.html' %} aria-current="page"{% endif %}>{{ link.text }}</a>
+      {%- endfor %}
+      <a class="nav__cta" href="mailto:{{ site.email }}">Get in touch</a>
+    </div>
+  </div>
+</nav>

@@ -1,40 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Faye Wai — Multi-creative</title>
-<meta name="description" content="Faye Wai — artist, poet, and content strategist in Port Moody, BC. Abstract painting, pottery, the poetry chapbook fragments & echoes, and editorial work.">
-<meta property="og:title" content="Faye Wai — Multi-creative">
-<meta property="og:description" content="Artist, poet, and content strategist. Painting, poetry, pottery, and editorial work.">
-<meta property="og:image" content="https://sam-hoult.github.io/fayewai/assets/og.jpg">
-<meta property="og:type" content="website">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..500;1,6..72,200..400&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
-<meta name="theme-color" content="#F7F4EF">
-<script>document.documentElement.classList.remove('no-js')</script>
-<script src="js/theme-default.js"></script>
-<script src="js/theme.js"></script>
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<nav class="nav" aria-label="Main">
-  <div class="nav__in">
-    <a class="brand" href="index.html"><span class="brand__name">Faye Wai</span><span class="brand__tag">multi-creative</span></a>
-    <button class="nav__toggle" type="button" aria-label="Menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
-    <div class="nav__links">
-      <a href="art.html">Art</a>
-      <a href="poetry.html">Poetry</a>
-      <a href="about.html">About</a>
-      <a href="editorial.html">Editorial</a>
-      <a class="nav__cta" href="mailto:hi.fayewai@gmail.com">Get in touch</a>
-    </div>
-  </div>
-</nav>
-
+---
+title: 'Faye Wai — Multi-creative'
+description: 'Faye Wai — artist, poet, and content strategist in Port Moody, BC. Abstract painting, pottery, the poetry chapbook fragments & echoes, and editorial work.'
+ogTitle: 'Faye Wai — Multi-creative'
+ogDescription: 'Artist, poet, and content strategist. Painting, poetry, pottery, and editorial work.'
+---
+{% from "work.njk" import tile %}
 <main id="main">
 <div class="wrap">
 
@@ -69,24 +39,16 @@
     </a>
   </section>
 
+  {#- The three pieces marked `featured: true` in _data/gallery.js. -#}
   <section class="section section--rule" aria-labelledby="selected">
     <div class="section-head" data-reveal>
       <span class="eyebrow" id="selected">Selected work</span>
       <a class="arrow" href="art.html">All work →</a>
     </div>
     <div class="tiles" data-lightbox>
-      <figure class="work" data-reveal data-full="assets/art/curious-curiouser.jpg">
-        <div class="frame r34"><img src="assets/art/curious-curiouser.jpg" alt="Two tall abstract paintings in plum and violet hung on a brick wall" loading="lazy" style="object-position:center 40%"></div>
-        <figcaption><span class="work__title">The Void</span><span>Diptych · mixed media</span></figcaption>
-      </figure>
-      <figure class="work offset" data-reveal data-full="assets/art/roots-and-rise.jpg">
-        <div class="frame r34"><img src="assets/art/roots-and-rise.jpg" alt="Tall painting in warm amber washes with fine dark lines" loading="lazy" style="object-position:center 30%"></div>
-        <figcaption><span class="work__title">Root &amp; Rise</span><span>Mixed media</span></figcaption>
-      </figure>
-      <figure class="work" data-reveal data-full="assets/art/dancing-whisper.jpg">
-        <div class="frame r34"><img src="assets/art/dancing-whisper.jpg" alt="Abstract painting with pink, green and black gestures on cream" loading="lazy"></div>
-        <figcaption><span class="work__title">Dancing Whispers</span><span>Acrylic</span></figcaption>
-      </figure>
+      {%- for w in gallery | featured %}
+      {{ tile(w, true, 'offset' if loop.index0 == 1 else '', 'r34') }}
+      {%- endfor %}
     </div>
   </section>
 
@@ -121,28 +83,10 @@
       <p class="prose">A limited-release poetry chapbook exploring heartbreak, home, and healing across cities and life chapters.</p>
       <div class="btns">
         <a class="btn btn--solid" href="poetry.html">Read poems</a>
-        <a class="btn" href="https://canva.link/cgwtzu5bwgkv15t" target="_blank" rel="noopener">Sample artwork</a>
+        <a class="btn" href="{{ chapbook.sample }}" target="_blank" rel="noopener">Sample artwork</a>
       </div>
     </div>
     <div data-reveal><div class="frame frame--blush frame--contain r34"><img src="assets/chapbook-cover-blush.jpg" alt="fragments &amp; echoes chapbook cover" loading="lazy"></div></div>
   </div>
 </section>
 </main>
-
-<footer class="footer">
-  <div class="grid grid--footer">
-    <div>
-      <p class="h2" style="max-width:22ch">Commissions are open</p>
-      <p class="prose">I make art that reflects the spirit of a space — a new home still finding its warmth, a clinic welcoming clients with comfort, a restaurant building an atmosphere worth remembering.</p>
-    </div>
-    <div class="footer__connect">
-      <span class="eyebrow">Connect</span>
-      <a class="footer__mail" href="mailto:hi.fayewai@gmail.com">hi.fayewai@gmail.com</a>
-      <a class="small" href="https://www.linkedin.com/in/fayewai/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-  <div class="footer__meta"><span class="i">colour, texture, rhythm, wisdom</span><span>© 2026 Faye Wai. All rights reserved. <button class="tp-toggle" type="button" data-theme-toggle>· Theme</button></span></div>
-</footer>
-<script src="js/site.js"></script>
-</body>
-</html>

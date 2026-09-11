@@ -185,9 +185,6 @@
       fetch(cfg.pdf, { method: 'HEAD' }).then(function (r) { if (r.ok) usePdf(cfg.pdf); }).catch(function () {});
     } else paint();
 
-    var sample = document.querySelector('[data-sample]');
-    if (sample && cfg.sample) sample.href = cfg.sample;
-
     if (prevBtn) prevBtn.addEventListener('click', function () { go(-1); });
     if (nextBtn) nextBtn.addEventListener('click', function () { go(1); });
     window.addEventListener('keydown', function (e) {

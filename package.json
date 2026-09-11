@@ -1,0 +1,13 @@
+{
+  "name": "fayewai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "fayewai.com \u2014 art, poetry and editorial work by Faye Wai.",
+  "scripts": {
+    "start": "eleventy --serve --port=${PORT:-8080}",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

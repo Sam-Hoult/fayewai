@@ -1,0 +1,42 @@
+{#- The page shell: head, nav, footer. Every page uses this, so the header
+    and footer are written once, here. Pages set title/description/ogImage
+    in their front matter. -#}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+{%- if description %}
+<meta name="description" content="{{ description }}">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ ogDescription or description }}">
+<meta property="og:image" content="{{ site.url }}/{{ ogImage or 'assets/og.jpg' }}">
+<meta property="og:type" content="website">
+{%- endif %}
+{%- if noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{ site.fonts }}" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<meta name="theme-color" content="#F7F4EF">
+<script>document.documentElement.classList.remove('no-js')</script>
+<script src="js/theme-default.js"></script>
+<script src="js/theme.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{% include "nav.njk" %}
+
+{{ content | safe }}
+
+{% include "footer.njk" %}
+<script src="js/site.js"></script>
+{%- for src in scripts %}
+<script src="{{ src }}"></script>
+{%- endfor %}
+</body>
+</html>

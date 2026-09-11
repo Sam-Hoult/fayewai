@@ -5,8 +5,9 @@
            ratio ('sq' 1:1 · 'r34' 3:4 · 'r45' 4:5 · 'r43' 4:3), position (object-position for the crop),
            contain: true (show the whole image on paper instead of cropping), full (optional larger file for the lightbox),
            featured: true (shows on the home page — first three), alt (accessible description).
-   Order here is the order on the page. Newest work at the top reads best. */
-window.GALLERY = [
+   Order here is the order on the page. Newest work at the top reads best.
+   The page is rebuilt from this list — no HTML to touch. */
+module.exports = [
   { src: 'assets/art/curious-curiouser.jpg', title: 'The Void', meta: 'Diptych · mixed media', type: 'painting', ratio: 'r34', position: 'center 40%', featured: true, alt: 'Two tall abstract paintings in plum and violet hung on a brick wall' },
   { src: 'assets/art/roots-and-rise.jpg', title: 'Root & Rise', meta: 'Mixed media', type: 'painting', ratio: 'r34', position: 'center 30%', featured: true, alt: 'Tall painting in warm amber washes with fine dark lines, leaning on a shelf' },
   { src: 'assets/art/dancing-whisper.jpg', title: 'Dancing Whispers', meta: 'Acrylic', type: 'painting', ratio: 'sq', featured: true, alt: 'Abstract painting with pink, green and black gestures on cream' },

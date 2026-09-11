@@ -1,0 +1,15 @@
+{#- The footer. Edit the words in _data/site.js, not here. -#}
+<footer class="footer">
+  <div class="grid grid--footer">
+    <div>
+      <p class="h2" style="max-width:22ch">{{ site.footer.heading }}</p>
+      <p class="prose">{{ site.footer.body }}</p>
+    </div>
+    <div class="footer__connect">
+      <span class="eyebrow">Connect</span>
+      <a class="footer__mail" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a class="small" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer__meta"><span class="i">{{ site.footer.tagline }}</span><span>{{ site.footer.copyright }} <button class="tp-toggle" type="button" data-theme-toggle>· Theme</button></span></div>
+</footer>
