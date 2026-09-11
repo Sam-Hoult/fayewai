@@ -2,5 +2,7 @@ _site/
 node_modules/
 .DS_Store
 
-# graft's local graph cache — regenerable, not committed (run `graft build`).
-/graft/
+# graft's repo map. The markdown cards and the wiring graph are committed so
+# anyone (or any agent) landing here gets the map for free; the cache under
+# graft/.cache/ is machine-local and regenerable with `graft build`.
+/graft/.cache/
