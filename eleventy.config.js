@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   }
   eleventyConfig.addPassthroughCopy('src/favicon.svg');
   eleventyConfig.addPassthroughCopy('src/robots.txt');
+  // Redirects from the old WordPress URLs; read by Cloudflare Workers, not served.
+  eleventyConfig.addPassthroughCopy('src/_redirects');
 
   // Rebuild when CSS or JS changes, even though they are copied rather than compiled.
   eleventyConfig.addWatchTarget('src/css');
