@@ -1,0 +1,32 @@
+# Old WordPress URLs still indexed by Google -> matching pages on the new site.
+# Format: [source] [destination] [code]. 301 so search engines transfer ranking.
+
+# Front page: WordPress kept a /home/ slug alongside the root.
+/home             /                 301
+/home/            /                 301
+
+# "About me" / "What I do" both describe Faye, which is now one page.
+/about            /about.html       301
+/about/           /about.html       301
+/about-me         /about.html       301
+/about-me/        /about.html       301
+/services         /about.html       301
+/services/        /about.html       301
+
+# "Creative" was the artwork.
+/creative         /art.html         301
+/creative/        /art.html         301
+
+# "Editorial portfolio" and the two portfolio slugs were the client work.
+/brand-portfolio  /editorial.html   301
+/brand-portfolio/ /editorial.html   301
+/portfolio        /editorial.html   301
+/portfolio/       /editorial.html   301
+/portfolio-new    /editorial.html   301
+/portfolio-new/   /editorial.html   301
+
+# WordPress feeds have no equivalent; send them home rather than 404.
+/feed             /                 301
+/feed/            /                 301
+/comments/feed    /                 301
+/comments/feed/   /                 301
