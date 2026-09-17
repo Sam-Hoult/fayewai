@@ -7,25 +7,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }}</title>
+{%- set canonical = site.url + (page.url | cleanUrl) %}
+{%- set socialImage = site.url + '/' + (ogImage or 'assets/og.jpg') %}
+<link rel="canonical" href="{{ canonical }}">
 {%- if description %}
 <meta name="description" content="{{ description }}">
 <meta property="og:title" content="{{ ogTitle or title }}">
 <meta property="og:description" content="{{ ogDescription or description }}">
-<meta property="og:image" content="{{ site.url }}/{{ ogImage or 'assets/og.jpg' }}">
+<meta property="og:image" content="{{ socialImage }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="{{ site.locale }}">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle or title }}">
+<meta name="twitter:description" content="{{ ogDescription or description }}">
+<meta name="twitter:image" content="{{ socialImage }}">
 {%- endif %}
 {%- if noindex %}
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex, nofollow">
+{%- else %}
+{#- max-image-preview:large is what lets Google show the large thumbnail. -#}
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 {%- endif %}
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+{%- if not noindex %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ (site.url + '/#person') | json | safe }},
+      "name": {{ site.name | json | safe }},
+      "url": {{ (site.url + '/') | json | safe }},
+      "jobTitle": {{ site.role | json | safe }},
+      "email": {{ ('mailto:' + site.email) | json | safe }},
+      "sameAs": [{{ site.linkedin | json | safe }}, {{ site.instagram | json | safe }}]
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ (site.url + '/#website') | json | safe }},
+      "url": {{ (site.url + '/') | json | safe }},
+      "name": {{ site.name | json | safe }},
+      "inLanguage": "en",
+      "publisher": { "@id": {{ (site.url + '/#person') | json | safe }} }
+    },
+    {
+      "@type": "WebPage",
+      "@id": {{ (canonical + '#webpage') | json | safe }},
+      "url": {{ canonical | json | safe }},
+      {%- if title %}
+      "name": {{ title | json | safe }},
+      {%- endif %}
+      {%- if description %}
+      "description": {{ description | json | safe }},
+      {%- endif %}
+      "isPartOf": { "@id": {{ (site.url + '/#website') | json | safe }} },
+      "about": { "@id": {{ (site.url + '/#person') | json | safe }} },
+      "primaryImageOfPage": { "@type": "ImageObject", "url": {{ socialImage | json | safe }} }
+    }
+  ]
+}
+</script>
+{%- endif %}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{{ site.fonts }}" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="/css/site.css">
 <meta name="theme-color" content="#F7F4EF">
 <script>document.documentElement.classList.remove('no-js')</script>
-<script src="js/theme-default.js"></script>
-<script src="js/theme.js"></script>
+<script src="/js/theme-default.js"></script>
+<script src="/js/theme.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +87,7 @@
 {{ content | safe }}
 
 {% include "footer.njk" %}
-<script src="js/site.js"></script>
+<script src="/js/site.js"></script>
 {%- for src in scripts %}
 <script src="{{ src }}"></script>
 {%- endfor %}

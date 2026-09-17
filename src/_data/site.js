@@ -4,17 +4,20 @@
 
 module.exports = {
   name: 'Faye Wai',
-  url: 'https://sam-hoult.github.io/fayewai',
+  url: 'https://fayewai.com',
   email: 'hi.fayewai@gmail.com',
+  /* Used in structured data and og:locale. */
+  locale: 'en_US',
+  role: 'Artist, poet and content strategist',
   linkedin: 'https://www.linkedin.com/in/fayewai/',
   instagram: 'https://www.instagram.com/fayewai.art/',
 
   /* The nav. Add a page here and it appears in the menu on every page. */
   nav: [
-    { text: 'Art', href: 'art.html' },
-    { text: 'Poetry', href: 'poetry.html' },
-    { text: 'About', href: 'about.html' },
-    { text: 'Editorial', href: 'editorial.html' },
+    { text: 'Art', href: '/art' },
+    { text: 'Poetry', href: '/poetry' },
+    { text: 'About', href: '/about' },
+    { text: 'Editorial', href: '/editorial' },
   ],
 
   footer: {

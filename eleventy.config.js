@@ -29,6 +29,13 @@ module.exports = function (eleventyConfig) {
     return seen;
   });
 
+  // Canonical form of a built page's URL: /index.html -> /, /about.html -> /about.
+  // Cloudflare serves the extensionless form and 307s the .html, so every
+  // link and canonical tag should use the clean one.
+  eleventyConfig.addFilter('cleanUrl', (url) =>
+    (url || '/').replace(/index\.html$/, '').replace(/\.html$/, '')
+  );
+
   // Embed a data file into the page as JSON (used for the chapbook reader settings).
   eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
 
